@@ -1,0 +1,294 @@
+package eecs441.shareeditor;
+
+import java.util.Stack;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.ColorFilter;
+import android.graphics.Typeface;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.InputType;
+import android.text.Layout;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.view.ViewGroup.LayoutParams;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.HorizontalScrollView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.GradientDrawable;
+
+public class MainActivity extends Activity
+{
+  EditText docText;
+  LinearLayout mainWindow;
+  HoldButton RightButton;
+  Button InsertButton;
+  Button UndoButton;
+  Button RedoButton;
+  HoldButton LeftButton;
+  boolean keyboardUp;
+  int myId = 10;
+  Event bufferEvent;
+  
+  Stack<Event> ActionStack;
+  Stack<Event> RedoStack;
+  @SuppressLint("NewApi")
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    keyboardUp = false;
+    final InputMethodManager inputManager = (InputMethodManager)
+        getSystemService(Context.INPUT_METHOD_SERVICE);
+    getWindow().setSoftInputMode(
+        WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+    
+    docText = new EditText(this);
+    docText.setLongClickable(false);
+    docText.setClickable(false);
+    
+    bufferEvent = new Event(myId);
+    ActionStack = new Stack<Event>();
+    RedoStack = new Stack<Event>();
+    
+   docText.setOnTouchListener(new OnTouchListener() {
+   @Override
+   public boolean onTouch(View v, MotionEvent event) {
+     Layout layout = ((EditText) v).getLayout();
+     int x = (int)event.getX();
+     int y = (int)event.getY();
+     if (layout!=null){
+         int line = layout.getLineForVertical(y);
+         int offset = layout.getOffsetForHorizontal(line, x);
+         docText.setSelection(offset);
+         }
+     return true;
+     }
+   });
+    docText.setTextIsSelectable(false);
+    docText.setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI);
+    docText.setHorizontallyScrolling(true);
+    docText.setCursorVisible(true);
+    docText.setTextSize(24);
+    docText.setText("Bullshit Bullshit Bullshit blah blah blabidy blah\n\n\n\n\n\n\n\n\n\n\n\nasdfasdf\n\n\nasdf\n\n\n\n\n\n\nEnd", TextView.BufferType.EDITABLE);
+    docText.setRawInputType(InputType.TYPE_TEXT_VARIATION_NORMAL | InputType.TYPE_TEXT_VARIATION_FILTER | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
+    docText.setTypeface(Typeface.SERIF);
+    docText.setBackgroundColor(0xFFF5fff2);
+    InsertButton = new Button(this);
+    InsertButton.setText("edit");
+    InsertButton.setTypeface(Typeface.DEFAULT_BOLD, Typeface.BOLD);
+    InsertButton.setTextColor(0xffffffff);
+    GradientDrawable gd = new GradientDrawable(
+        GradientDrawable.Orientation.TOP_BOTTOM,
+        new int[] {0xFFda3314,0xFFba1314});
+        //new int[] {0xff15f465, 0xff05e445});
+    
+    gd.setCornerRadius(0f);
+
+    InsertButton.setBackground(gd);
+    //InsertButton.setBackgroundColor(0xff98ff00);
+
+    
+    InsertButton.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View ClickedButton) {
+        if(keyboardUp) {
+          InsertButton.setText("edit");
+          inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+              InputMethodManager.HIDE_NOT_ALWAYS);
+          keyboardUp = false;
+        } else {
+        inputManager.showSoftInput(getCurrentFocus(),  0);
+        InsertButton.setText("hide");
+        keyboardUp = true;
+        }
+      }
+    });   
+    GradientDrawable gd2 = new GradientDrawable(
+        GradientDrawable.Orientation.TOP_BOTTOM,
+        new int[] {0xFF33bbff,0xFF1188ee});
+    gd2.setCornerRadius(0f);
+    GradientDrawable gd3 = new GradientDrawable(
+        GradientDrawable.Orientation.TOP_BOTTOM,
+        //new int[] {0xff25b425,0xFF158415});
+        new int[] {0xff6405ff, 0xff4405df});
+    gd3.setCornerRadius(0f);
+    GradientDrawable gd4 = new GradientDrawable(
+        GradientDrawable.Orientation.TOP_BOTTOM,
+        //new int[] {0xffffd300,0xFFdfc300});
+    new int[] {0xFFaa23d4,0xFF8a03b4});
+    gd4.setCornerRadius(0f);
+    UndoButton = new Button(this);
+    RedoButton = new Button(this);
+    UndoButton.setText("↶");
+    UndoButton.setTextColor(0xffffffff);
+    UndoButton.setTypeface(Typeface.DEFAULT_BOLD, Typeface.BOLD);
+    UndoButton.setBackground(gd4);
+    UndoButton.setOnClickListener(new Undo());
+    RedoButton.setText("↷");
+    RedoButton.setTextColor(0xffffffff);
+    RedoButton.setTypeface(Typeface.DEFAULT_BOLD, Typeface.BOLD);
+    RedoButton.setBackground(gd3);
+    RightButton = new HoldButton(this);
+    RightButton.setBackground(gd2);
+    LeftButton = new HoldButton(this);
+    LeftButton.setBackground(gd2);
+    RightButton.setText(">");
+    RightButton.setTextColor(0xffffffff);
+    RightButton.setTypeface(Typeface.DEFAULT_BOLD, Typeface.BOLD);
+    LeftButton.setText("<");
+    LeftButton.setTextColor(0xffffffff);
+    LeftButton.setTypeface(Typeface.DEFAULT_BOLD, Typeface.BOLD);
+    RightButton.setOnClickListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(docText.getSelectionStart()< docText.length()) {
+          docText.setSelection(docText.getSelectionStart()+1);
+        }
+      }
+    });
+    LeftButton.setOnClickListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(docText.getSelectionStart()> 0) {
+          docText.setSelection(docText.getSelectionStart()-1);
+        }
+      }
+    });
+    
+    mainWindow = new LinearLayout(this);
+    mainWindow.setOrientation(LinearLayout.VERTICAL);
+    mainWindow.setWeightSum(100f);
+    setTitle("Text Editor");
+    this.setTitleColor(0x015666);
+    
+    HorizontalScrollView innerPanel = new HorizontalScrollView(this);
+    innerPanel.addView(docText);
+    //innerPanel.setBackgroundColor(0xFFF5fff2);
+    //innerPanel.setPadding(30, 30, 30, 30);
+    innerPanel.setForegroundGravity(0x00000011);
+    
+    ScrollView textPanel = new ScrollView(this);
+    textPanel.addView(innerPanel);
+    textPanel.setFillViewport(true);
+    textPanel.setBackgroundColor(0xff222222);
+    textPanel.setForegroundGravity(0x01);
+    
+    LinearLayout.LayoutParams lay = new LinearLayout.LayoutParams(
+        LayoutParams.MATCH_PARENT, 
+        LayoutParams.MATCH_PARENT);
+    lay.weight = 20f;
+    LinearLayout.LayoutParams lay2 = new LinearLayout.LayoutParams(
+        LayoutParams.MATCH_PARENT, 
+        1000);
+    lay2.weight = 80f;
+    
+   
+    LinearLayout.LayoutParams buttonLay = new LinearLayout.LayoutParams(
+        LayoutParams.MATCH_PARENT, 
+        LayoutParams.WRAP_CONTENT, 5f);
+    buttonLay.setMargins(30, 0, 15, 0);
+    LinearLayout.LayoutParams undoLay = new LinearLayout.LayoutParams(
+        LayoutParams.MATCH_PARENT, 
+        LayoutParams.WRAP_CONTENT, 5f);
+    undoLay.setMargins(15, 0, 30, 0);
+    LinearLayout.LayoutParams editLay = new LinearLayout.LayoutParams(
+        LayoutParams.MATCH_PARENT, 
+        LayoutParams.WRAP_CONTENT, 4.5f);
+    
+    LinearLayout buttonLayout = new LinearLayout(this);
+    buttonLayout.setOrientation(LinearLayout.HORIZONTAL);
+    buttonLayout.setWeightSum(24.5f);
+    buttonLayout.setGravity(0x10);
+    buttonLayout.setBackgroundColor(0xff222222);
+    buttonLayout.addView(UndoButton, buttonLay);
+    buttonLayout.addView(RedoButton, undoLay);
+    buttonLayout.addView(InsertButton, editLay);
+    buttonLayout.addView(LeftButton, buttonLay);
+    buttonLayout.addView(RightButton, undoLay);
+
+    mainWindow.addView(textPanel, lay);
+    mainWindow.addView(buttonLayout, lay2);
+    
+    docText.addTextChangedListener(new TextWatcher() {
+      @Override
+      public void onTextChanged(CharSequence s, int start, int before, int count) {
+        Context context = getApplicationContext();
+        String text = s.subSequence(start, start+count).toString();
+        if(before == 1) text = s.subSequence(start,  start + count).toString();
+        int duration = Toast.LENGTH_SHORT;
+        if(before == 0) {
+        Toast toast = Toast.makeText(context, text + " " + count + start + before, duration);
+        toast.show();
+
+        if(bufferEvent.getLength() == 0) bufferEvent.setCursorStart(start);
+        bufferEvent.appendString(text);
+        if(bufferEvent.getLength() > 6) {
+          ActionStack.push(bufferEvent);
+          RedoStack.clear();
+          bufferEvent = new Event(myId);
+        }
+        }
+
+      }
+
+      @Override
+      public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+          // TODO Auto-generated method stub
+      }
+
+      @Override
+      public void afterTextChanged(Editable s) {
+
+      }
+  });
+    
+    setContentView(mainWindow);
+  }
+  
+  
+  private class Undo implements OnClickListener {
+    @Override
+    public void onClick(View clickedButton) {
+      if(bufferEvent.getLength() != 0) {
+        ActionStack.push(bufferEvent);
+        RedoStack.clear();
+        bufferEvent = new Event(myId);
+        //bufferEvent.clearString();
+      }
+      if(!ActionStack.empty()) {
+        Event undone = ActionStack.pop();
+        int cPos = undone.getCursorStart();
+        int cEnd = cPos + undone.getLength();
+        String t = docText.getText().toString();
+        String tnew = t.substring(0, cPos) + t.substring(cEnd, t.length());
+        docText.setText(tnew);
+        RedoStack.push(undone);
+        docText.setSelection(cPos);
+      }
+      }          
+    }
+  private class Redo implements OnClickListener {
+    @Override
+    public void onClick(View clickedButton) {
+      if(!RedoStack.empty()) {
+        
+      }
+      }          
+    }
+}
+

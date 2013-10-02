@@ -51,16 +51,11 @@ public class MainActivity1 extends Activity
 {
   
   MainView mainWindow;
-  //EditText docText;
-  //LinearLayout mainWindow;
-  //HoldButton RightButton;
-  //Button InsertButton;
-  //HoldButton LeftButton;
+
   LinearLayout connectScreen;
   boolean keyboardUp;
   private static String TAG = "ShareEditor";
   
-  Button manageSessions;
   Button textEditor;
   
   private CollabrifyClient myClient;
@@ -88,9 +83,6 @@ public class MainActivity1 extends Activity
         WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     
     mainWindow = new MainView(this);
-    //docText = new EditText(this);
-    //docText.setLongClickable(false);
-    //docText.setClickable(false);
     
    mainWindow.setCursorTouchListener(new OnTouchListener() {
      private int x;
@@ -118,12 +110,7 @@ public class MainActivity1 extends Activity
      return true;
    }
    });
-    //docText.setTextIsSelectable(false);
-    //docText.setHorizontallyScrolling(false);
-    //docText.setCursorVisible(true);
-    //docText.setTextSize(24);
-    //docText.setText("hi", TextView.BufferType.EDITABLE);
-    //docText.setRawInputType(InputType.TYPE_TEXT_VARIATION_NORMAL | InputType.TYPE_TEXT_VARIATION_FILTER | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
+  
     mainWindow.setTextChangedListener(new TextWatcher() {
       public void beforeTextChanged(CharSequence s, int start, int count, int after) {
         if(!received && count > 0) {
@@ -153,7 +140,6 @@ public class MainActivity1 extends Activity
       @Override
       public void afterTextChanged(Editable arg0)
       {
-        // TODO Auto-generated method stub
         
       }
 
@@ -183,8 +169,6 @@ public class MainActivity1 extends Activity
         received = false;
       }
     });
-    //InsertButton = new Button(this);
-    //InsertButton.setText("Edit");
     
     mainWindow.setInsertClickListener(new OnClickListener() {
       @Override
@@ -202,10 +186,6 @@ public class MainActivity1 extends Activity
       }
     });   
     
-    //RightButton = new HoldButton(this);
-    //LeftButton = new HoldButton(this);
-    //RightButton.setText("Move Right");
-    //LeftButton.setText("Move Left");
     mainWindow.setCursorRightListener(new OnClickListener() {
       public void onClick(View clickedButton) {
         Event.Builder event = Event.newBuilder();
@@ -265,44 +245,8 @@ public class MainActivity1 extends Activity
       }
     });
     
-    //mainWindow = new LinearLayout(this);
-    //mainWindow.setOrientation(LinearLayout.VERTICAL);
-    //mainWindow.setWeightSum(100f);
     setTitle("Text Editor");
     
-
-    //ScrollView textPanel = new ScrollView(this);
-    //textPanel.addView(docText);
-    //textPanel.setFillViewport(true);
-    /*
-    LinearLayout.LayoutParams lay = new LinearLayout.LayoutParams(
-        LayoutParams.MATCH_PARENT, 
-        LayoutParams.MATCH_PARENT);
-    lay.weight = 20f;
-    LinearLayout.LayoutParams lay2 = new LinearLayout.LayoutParams(
-        LayoutParams.MATCH_PARENT, 
-        1000);
-    lay2.weight = 80f;
-    
-   
-    LinearLayout.LayoutParams left = new LinearLayout.LayoutParams(
-        LayoutParams.MATCH_PARENT, 
-        LayoutParams.WRAP_CONTENT, 3f);
-
-    LinearLayout buttonLayout = new LinearLayout(this);
-    buttonLayout.setOrientation(LinearLayout.HORIZONTAL);
-    buttonLayout.setWeightSum(9f);
-    buttonLayout.setGravity(0x10);
-    buttonLayout.setBackgroundColor(0xff8888ff);;
-    
-    buttonLayout.addView(LeftButton, left);
-    buttonLayout.addView(InsertButton, left);
-    buttonLayout.addView(RightButton, left);
-
-    mainWindow.addView(textPanel, lay);
-    mainWindow.addView(buttonLayout, lay2);
-
-    */
     /////////////////////////////////////////////////////////////////////////
     /////       Creation of secondary screen for connections            /////
     /////////////////////////////////////////////////////////////////////////
@@ -580,19 +524,6 @@ public class MainActivity1 extends Activity
     /////////////////////////////////////////////////////////////////////////
     /////       Protocol buffer workspace for now                       /////
     /////////////////////////////////////////////////////////////////////////
-    
-    manageSessions = new Button(this);
-    manageSessions.setText("Manage Sessions");
-    manageSessions.setOnClickListener(new OnClickListener()
-    {
-
-      @Override
-      public void onClick(View v)
-      {
-        setContentView(connectScreen);
-      }
-    });
-    //mainWindow.addView(manageSessions);
     
     textEditor = new Button(this);
     textEditor.setText("Edit Text");

@@ -38,16 +38,10 @@ public class MainView extends LinearLayout
   Button InsertButton;
   Button UndoButton;
   Button RedoButton;
-  //boolean keyboardUp;
     
   @SuppressLint("NewApi")
 public MainView(Context context) {
     super(context);
-    //keyboardUp = false;
-    //final InputMethodManager inputManager = (InputMethodManager)
-    //    context.getSystemService(Context.INPUT_METHOD_SERVICE);
-    //activity.getWindow().setSoftInputMode(
-    //    WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     
     docText = new EditText(context);
     docText.setLongClickable(false);
@@ -58,7 +52,7 @@ public MainView(Context context) {
     docText.setHorizontallyScrolling(false);
     docText.setCursorVisible(true);
     docText.setTextSize(24);
-    docText.setText("Bullshit Bullshit Bullshit blah blah blabidy blah\n\n\n\n\n\n\n\n\n\n\n\nasdfasdf\n\n\nasdf\n\n\n\n\n\n\nEnd", TextView.BufferType.EDITABLE);
+    docText.setText("Sample Text: Blah, Blah bla blah blah \n\n\n\n\n\nEnd", TextView.BufferType.EDITABLE);
     docText.setRawInputType(InputType.TYPE_TEXT_VARIATION_NORMAL | InputType.TYPE_TEXT_VARIATION_FILTER | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
     docText.setTypeface(Typeface.SERIF);
     docText.setBackgroundColor(0xFFF5fff2);
@@ -70,29 +64,11 @@ public MainView(Context context) {
     GradientDrawable gd = new GradientDrawable(
         GradientDrawable.Orientation.TOP_BOTTOM,
         new int[] {0xFFda3314,0xFFba1314});
-        //new int[] {0xff15f465, 0xff05e445});
     
     gd.setCornerRadius(0f);
 
     InsertButton.setBackground(gd);
-    //InsertButton.setBackgroundColor(0xff98ff00);
-
     
-    //InsertButton.setOnClickListener(new OnClickListener() {
-    //  @Override
-    //  public void onClick(View ClickedButton) {
-    //    if(keyboardUp) {
-    //      InsertButton.setText("edit");
-    //      inputManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(),
-    //          InputMethodManager.HIDE_NOT_ALWAYS);
-    //      keyboardUp = false;
-    //    } else {
-    //    inputManager.showSoftInput(activity.getCurrentFocus(),  0);
-    //    InsertButton.setText("hide");
-    //    keyboardUp = true;
-    //    }
-    //  }
-    //});   
     GradientDrawable gd2 = new GradientDrawable(
         GradientDrawable.Orientation.TOP_BOTTOM,
         new int[] {0xFF33bbff,0xFF1188ee});
@@ -129,10 +105,6 @@ public MainView(Context context) {
     setOrientation(LinearLayout.VERTICAL);
     setWeightSum(100f);
     
-    //HorizontalScrollView innerPanel = new HorizontalScrollView(context);
-    //innerPanel.addView(docText);
-    //innerPanel.setForegroundGravity(0x00000011);
-    
     ScrollView textPanel = new ScrollView(context);
     textPanel.addView(docText, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
     textPanel.setFillViewport(true);
@@ -151,15 +123,16 @@ public MainView(Context context) {
    
     LinearLayout.LayoutParams buttonLay = new LinearLayout.LayoutParams(
         LayoutParams.MATCH_PARENT, 
-        LayoutParams.WRAP_CONTENT, 5f);
-    buttonLay.setMargins(30, 0, 15, 0);
+        LayoutParams.MATCH_PARENT, 5f);
+    buttonLay.setMargins(30, 30, 15, 30);
     LinearLayout.LayoutParams undoLay = new LinearLayout.LayoutParams(
         LayoutParams.MATCH_PARENT, 
-        LayoutParams.WRAP_CONTENT, 5f);
-    undoLay.setMargins(15, 0, 30, 0);
+        LayoutParams.MATCH_PARENT, 5f);
+    undoLay.setMargins(15, 30, 30, 30);
     LinearLayout.LayoutParams editLay = new LinearLayout.LayoutParams(
         LayoutParams.MATCH_PARENT, 
-        LayoutParams.WRAP_CONTENT, 4.5f);
+        LayoutParams.MATCH_PARENT, 4.5f);
+    editLay.setMargins(0,30,0,30);
     
     LinearLayout buttonLayout = new LinearLayout(context);
     buttonLayout.setOrientation(LinearLayout.HORIZONTAL);

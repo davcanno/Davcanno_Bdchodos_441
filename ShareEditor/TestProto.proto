@@ -11,4 +11,6 @@ message Event {
 	optional string beforetext = 3;
 	
 	optional string aftertext = 4;
+	
+	optional bool ended = 5;
 }

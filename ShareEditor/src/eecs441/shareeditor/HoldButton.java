@@ -11,13 +11,12 @@ public class HoldButton extends Button {
   private long initialRepeatDelay = 500;
   private long repeatIntervalInMilliseconds = 100;
 
-  private Runnable repeatClickWhileButtonHeldRunnable = new Runnable() {
+  private Runnable repeatClick = new Runnable() {
     @Override
     public void run() {
 
       performClick();
-
-      postDelayed(repeatClickWhileButtonHeldRunnable, repeatIntervalInMilliseconds);
+      postDelayed(repeatClick, repeatIntervalInMilliseconds);
     }
   };
 
@@ -28,15 +27,14 @@ public class HoldButton extends Button {
                 int action = event.getAction(); 
                 if(action == MotionEvent.ACTION_DOWN) 
                 {
-                  removeCallbacks(repeatClickWhileButtonHeldRunnable);
+                  removeCallbacks(repeatClick);
                   performClick();
 
-                  postDelayed(repeatClickWhileButtonHeldRunnable, initialRepeatDelay);
+                  postDelayed(repeatClick, initialRepeatDelay);
                 }
                 else if(action == MotionEvent.ACTION_UP) {
-                  removeCallbacks(repeatClickWhileButtonHeldRunnable);
+                  removeCallbacks(repeatClick);
                 }
-
                 return true;
       }
     });

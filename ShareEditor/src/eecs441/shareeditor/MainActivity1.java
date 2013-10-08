@@ -1,9 +1,7 @@
 package eecs441.shareeditor;
 
 import com.google.protobuf.*;
-
 import eecs441.shareeditor.proto.TestProto.Event;
-
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -11,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.logging.Logger;
-
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import eecs441.shareeditor.R;
@@ -22,8 +20,11 @@ import edu.umich.imlc.collabrify.client.CollabrifyClient;
 import edu.umich.imlc.collabrify.client.CollabrifySession;
 import edu.umich.imlc.collabrify.client.exceptions.CollabrifyException;
 import edu.umich.imlc.collabrify.client.exceptions.ConnectException;
+import edu.umich.imlc.collabrify.client.exceptions.LeaveException;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Typeface;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
@@ -46,6 +47,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity1 extends Activity
 {
@@ -55,6 +57,13 @@ public class MainActivity1 extends Activity
   LinearLayout connectScreen;
   boolean keyboardUp;
   private static String TAG = "ShareEditor";
+  
+  ActionEvent bufferAction;
+  ActionStack UndoStack;
+  ActionStack RedoStack;
+  int MyCounter;
+  
+  private EditText sessionText;
   
   Button textEditor;
   
@@ -67,15 +76,32 @@ public class MainActivity1 extends Activity
   private ArrayList<String> tags = new ArrayList<String>();
   private long sessionId;
   private String sessionName;
-  private String fixThis="";
-  private String removeText="";
   private int userId;
   private boolean received = false;
   
-  @Override
+  @SuppressLint("NewApi")
+@Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    userId = 2;
+    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    builder.setTitle("Enter User ID Number");
+
+    // Set up the input
+    final EditText input = new EditText(this);
+    // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+    input.setInputType(InputType.TYPE_CLASS_NUMBER);
+    builder.setView(input);
+
+    // Set up the buttons
+    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() { 
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            userId = Integer.parseInt(input.getText().toString());
+            setContentView(connectScreen);
+        }
+    });
+
+    builder.show();
     keyboardUp = false;
     final InputMethodManager inputManager = (InputMethodManager)
         getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -83,6 +109,11 @@ public class MainActivity1 extends Activity
         WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     
     mainWindow = new MainView(this);
+    
+    bufferAction = new ActionEvent();
+    RedoStack = new ActionStack();
+    UndoStack = new ActionStack();
+    MyCounter = 0;
     
    mainWindow.setCursorTouchListener(new OnTouchListener() {
      private int x;
@@ -113,8 +144,13 @@ public class MainActivity1 extends Activity
   
     mainWindow.setTextChangedListener(new TextWatcher() {
       public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        if(!received && count > 0) {
-          if(fixThis.length() != 0) {
+        if(!received) {
+
+          bufferAction = new ActionEvent();
+
+          bufferAction.setDeleteString(s.toString().substring(start, start+count));
+          MyCounter++;
+          /*if(fixThis.length() != 0) {
             Event.Builder event = Event.newBuilder();
             event.setId(userId);
             event.setCursorpos(mainWindow.getCursorPosition());
@@ -130,24 +166,40 @@ public class MainActivity1 extends Activity
               e1.printStackTrace();
             }
           }
-          removeText += s.toString().substring(start, start+count);
+          removeText += s.toString().substring(start, start+count);*/
         }
-        if(count > 0) {
-          received = false;
-        }
+
       }
 
       @Override
       public void afterTextChanged(Editable arg0)
       {
-        
+        received = false;
       }
 
       @Override
       public void onTextChanged(CharSequence s, int start, int before, int count)
       {
-        if(!received && count > 0) {
-          if(removeText.length() != 0) {
+        if(!received) {
+          bufferAction.setInsertString(s.toString().substring(start,start+count));
+          bufferAction.setCursorStart(start);
+          Event.Builder event = Event.newBuilder();
+          event.setId(userId);
+          event.setCursorpos(bufferAction.getCursorStart());
+          event.setBeforetext(bufferAction.delString());
+          event.setAftertext(bufferAction.insString());           
+          try
+          {
+            myClient.broadcast(event.build().toByteArray(), "lol");
+            //MyCounter++;
+          }
+          catch( CollabrifyException e1 )
+          {
+            e1.printStackTrace();
+          }
+          RedoStack.clear();
+          UndoStack.push(bufferAction.invert());
+          /*if(removeText.length() != 0) {
             Event.Builder event = Event.newBuilder();
             event.setId(userId);
             event.setCursorpos(mainWindow.getCursorPosition()-count);
@@ -164,9 +216,9 @@ public class MainActivity1 extends Activity
             }
           }
           System.out.println("HERE"+s.toString().substring(start, start+count));
-          fixThis += s.toString().substring(start, start+count);
+          fixThis += s.toString().substring(start, start+count);*/
         }
-        received = false;
+        //received = false;
       }
     });
     
@@ -188,28 +240,6 @@ public class MainActivity1 extends Activity
     
     mainWindow.setCursorRightListener(new OnClickListener() {
       public void onClick(View clickedButton) {
-        Event.Builder event = Event.newBuilder();
-        event.setId(userId);
-        event.setCursorpos(mainWindow.getCursorPosition());
-        if(fixThis.length() != 0) {
-          event.setBeforetext("");
-          event.setAftertext(fixThis);
-          fixThis = "";
-        }
-        else {
-          event.setBeforetext(removeText);
-          event.setAftertext("");  
-          removeText="";
-        }
-        
-        try
-        {
-          myClient.broadcast(event.build().toByteArray(), "lol");
-        }
-        catch( CollabrifyException e1 )
-        {
-          e1.printStackTrace();
-        }
         if(mainWindow.getCursorPosition() < mainWindow.getLength()) {
           mainWindow.setCursorPosition(mainWindow.getCursorPosition()+1);
         }
@@ -217,35 +247,59 @@ public class MainActivity1 extends Activity
     });
     mainWindow.setCursorLeftListener(new OnClickListener() {
       public void onClick(View clickedButton) {
-        Event.Builder event = Event.newBuilder();
-        event.setId(userId);
-        event.setCursorpos(mainWindow.getCursorPosition());
-        if(fixThis.length() != 0) {
-          event.setBeforetext("");
-          event.setAftertext(fixThis);
-          fixThis = "";
-        }
-        else {
-          event.setBeforetext(removeText);
-          event.setAftertext("");  
-          removeText="";
-        }
-        
-        try
-        {
-          myClient.broadcast(event.build().toByteArray(), "lol");
-        }
-        catch( CollabrifyException e1 )
-        {
-          e1.printStackTrace();
-        }
         if(mainWindow.getCursorPosition()> 0) {
           mainWindow.setCursorPosition(mainWindow.getCursorPosition()-1);
         }
       }
     });
-    
-    setTitle("Text Editor");
+    mainWindow.setUndoClickListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(!UndoStack.isEmpty()) {
+          ActionEvent temp = UndoStack.pop();
+          received = true;
+          mainWindow.applyActionEvent(temp);
+          RedoStack.push(temp.invert());
+          Event.Builder event = Event.newBuilder();
+          event.setId(userId);
+          event.setCursorpos(temp.getCursorStart());
+          event.setBeforetext(temp.delString());
+          event.setAftertext(temp.insString());           
+          try
+          {
+            myClient.broadcast(event.build().toByteArray(), "lol");
+            MyCounter++;
+          }
+          catch( CollabrifyException e1 )
+          {
+            e1.printStackTrace();
+          }
+        }
+      }
+    });
+    mainWindow.setRedoClickListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(!RedoStack.isEmpty()) {
+          ActionEvent temp = RedoStack.pop();
+          received = true;
+          mainWindow.applyActionEvent(temp);
+          UndoStack.push(temp.invert());
+          Event.Builder event = Event.newBuilder();
+          event.setId(userId);
+          event.setCursorpos(temp.getCursorStart());
+          event.setBeforetext(temp.delString());
+          event.setAftertext(temp.insString());           
+          try
+          {
+            myClient.broadcast(event.build().toByteArray(), "lol");
+            MyCounter++;
+          }
+          catch( CollabrifyException e1 )
+          {
+            e1.printStackTrace();
+          }
+        }
+      }
+    });
     
     /////////////////////////////////////////////////////////////////////////
     /////       Creation of secondary screen for connections            /////
@@ -254,7 +308,15 @@ public class MainActivity1 extends Activity
     connectScreen = new LinearLayout(this);
     connectScreen.setOrientation(LinearLayout.VERTICAL);
     connectScreen.setWeightSum(100f);
-    setTitle("Collabrify Sessions");
+    connectScreen.setBackgroundColor(0xff55ddff);
+    setTitle("WeWrite");
+    
+    sessionText = new EditText(this);
+    sessionText.setText("");
+    sessionText.setRawInputType(InputType.TYPE_TEXT_VARIATION_NORMAL | InputType.TYPE_TEXT_VARIATION_FILTER | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
+    sessionText.setGravity(0x01);
+    sessionText.setTextSize(24);
+    sessionText.setBackgroundColor(0xffffffff);
     
     connectButton = new Button(this);
     connectButton.setText("Connect");
@@ -274,35 +336,42 @@ public class MainActivity1 extends Activity
 
       @Override
       public void onClick(View v)
-      {
-        Random rand = new Random();
-        sessionName = "Test " + rand.nextInt(Integer.MAX_VALUE);
-        try
-        {
-          myClient.createSession(sessionName, tags, null, 0);
+      {        
+        sessionName = sessionText.getText().toString();
+        inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+            InputMethodManager.HIDE_NOT_ALWAYS);
+        if(sessionName.length() > 0) {
+          try
+          {
+            myClient.createSession(sessionName, tags, null, 0);
+          }
+          catch( ConnectException e )
+          {
+            e.printStackTrace();
+          }
+          catch( CollabrifyException e )
+          {
+            e.printStackTrace();
+          }
+          Log.i(TAG, "Session name is " + sessionName);
+          connectButton.setText("Connected to " + sessionName);
+          //sessionText.setTextIsSelectable(false);
+          setTitle("WeWrite - " + sessionName);
         }
-        catch( ConnectException e )
-        {
-          e.printStackTrace();
-        }
-        catch( CollabrifyException e )
-        {
-          e.printStackTrace();
-        }
-        Log.i(TAG, "Session name is " + sessionName);
-        connectButton.setText(sessionName);
+        else Toast.makeText(getBaseContext(), "Invalid Session Name", Toast.LENGTH_SHORT).show();
       }
     });
 
     getSessionButton.setOnClickListener(new OnClickListener()
     {
-
       @Override
       public void onClick(View v)
       {
         try
         {
           myClient.requestSessionList(tags);
+          inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+              InputMethodManager.HIDE_NOT_ALWAYS);
         }
         catch( Exception e )
         {
@@ -313,7 +382,6 @@ public class MainActivity1 extends Activity
 
     leaveSessionButton.setOnClickListener(new OnClickListener()
     {
-
       @Override
       public void onClick(View v)
       {
@@ -322,6 +390,9 @@ public class MainActivity1 extends Activity
           if( myClient.inSession() )
             myClient.leaveSession(false);
             connectButton.setText("Connect");
+            sessionText.setText("");
+            //sessionText.setTextIsSelectable(true);
+            setTitle("WeWrite - No Session");
         }
         catch( CollabrifyException e )
         {
@@ -332,15 +403,23 @@ public class MainActivity1 extends Activity
     
     endSessionButton.setOnClickListener(new OnClickListener()
     {
-
       @Override
       public void onClick(View v)
       {
         try
         {
-          if( myClient.inSession() )
-            myClient.currentSessionEnded();
+          if( myClient.inSession() && myClient.currentSessionOwner().getId() == 
+              myClient.currentSessionParticipantId()) {
+            Event.Builder event = Event.newBuilder();
+            event.setId(userId);
+            event.setEnded(true);
+            myClient.broadcast(event.build().toByteArray(), "lol");
+            myClient.leaveSession(true);
             connectButton.setText("Connect");
+            sessionText.setText("");
+            //sessionText.setTextIsSelectable(true);
+            setTitle("WeWrite - No Session");
+          }
         }
         catch( CollabrifyException e )
         {
@@ -348,15 +427,37 @@ public class MainActivity1 extends Activity
         }
       }
     });
-
-    connectScreen.addView(connectButton);
-    connectScreen.addView(getSessionButton);
-    connectScreen.addView(leaveSessionButton);
-    connectScreen.addView(endSessionButton);
+    final GradientDrawable gd = new GradientDrawable(
+        GradientDrawable.Orientation.TOP_BOTTOM,
+        new int[] {0xFFda3314,0xFFba1314});  
+    gd.setCornerRadius(0f);
+    
+    connectButton.setTypeface(Typeface.DEFAULT_BOLD, Typeface.BOLD);
+    connectButton.setTextColor(0xffffffff);
+    connectButton.setBackground(gd);
+    getSessionButton.setTypeface(Typeface.DEFAULT_BOLD, Typeface.BOLD);
+    getSessionButton.setTextColor(0xffffffff);
+    getSessionButton.setBackground(gd);
+    leaveSessionButton.setTypeface(Typeface.DEFAULT_BOLD, Typeface.BOLD);
+    leaveSessionButton.setTextColor(0xffffffff);
+    leaveSessionButton.setBackground(gd);
+    endSessionButton.setTypeface(Typeface.DEFAULT_BOLD, Typeface.BOLD);
+    endSessionButton.setTextColor(0xffffffff);
+    endSessionButton.setBackground(gd);
+    
+    
+    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+    params.setMargins(150, 20, 150, 20);
+    LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+    params2.setMargins(100, 300, 100, 20);
+    connectScreen.addView(sessionText, params2);
+    connectScreen.addView(connectButton, params);
+    connectScreen.addView(getSessionButton, params);
+    connectScreen.addView(leaveSessionButton, params);
+    connectScreen.addView(endSessionButton, params);
     
     collabrifyListener = new CollabrifyAdapter()
     {
-
       @Override
       public void onDisconnect()
       {
@@ -385,10 +486,7 @@ public class MainActivity1 extends Activity
           {
             Utils.printMethodName(TAG);
             //String message = new String(data);
-            System.out.println("RECVD MESSG?");
-/////////////////////////////////////////////////////////////////////////
-/////       Protocol buffer workspace for now                       /////
-/////////////////////////////////////////////////////////////////////////           
+            System.out.println("RECVD MESSG?");           
             Event eventRecvd = null;
             try
             {
@@ -398,21 +496,61 @@ public class MainActivity1 extends Activity
             {
               e.printStackTrace();
             }
+            System.out.println("#########" + userId + " " + eventRecvd.getId());
             //DO ACTION HERE
             if(eventRecvd.getId() != userId) {
-              String after = eventRecvd.getAftertext();
-              String before = eventRecvd.getBeforetext();
-              int cursor = eventRecvd.getCursorpos();
-              if(after.length() > 0) {
-                //INSERT
-                received = true;
-                mainWindow.getText().replace(cursor-after.length(), cursor-after.length(), after);
+              if(eventRecvd.hasEnded()) {
+                connectButton.setText("Connect");
+                //sessionText.setTextIsSelectable(true);
+                sessionText.setText("");
+                setTitle("WeWrite - No Session");
+                try
+                {
+                  myClient.leaveSession(false);
+                }
+                catch( LeaveException e )
+                {
+                  // TODO Auto-generated catch block
+                  e.printStackTrace();
+                }
+                catch( CollabrifyException e )
+                {
+                  // TODO Auto-generated catch block
+                  e.printStackTrace();
+                }
+                setContentView(connectScreen); 
               }
               else {
-                //REMOVE
+                ActionEvent A = new ActionEvent();
+                if(eventRecvd.hasAftertext())
+                  A.setInsertString(eventRecvd.getAftertext());
+                if(eventRecvd.hasBeforetext())
+                  A.setDeleteString(eventRecvd.getBeforetext());
+                if(eventRecvd.hasCursorpos())
+                  A.setCursorStart(eventRecvd.getCursorpos());
+                System.out.println("Cursor: " + eventRecvd.getCursorpos());
+              
+     ///////////////LOOK HERE SYNTAX IS NOT RIGHT BUT I DONT KNOW IT////////////////////////////
+                int RecCounter = (int) orderId;
+                //received = true;
+                for(int i = 0; i < MyCounter - RecCounter; i++) {
+                  received = true;
+                  ActionEvent temp = UndoStack.pop();
+                  mainWindow.applyActionEvent(temp);
+                  RedoStack.push(temp.invert());
+                }
                 received = true;
-                mainWindow.getText().replace(cursor, cursor+before.length(), after);
-              }        
+                mainWindow.applyActionEvent(A);
+                UndoStack.ApplyActionEvent(A);
+                RedoStack.ApplyActionEvent(A);
+               for(int i = 0; i < MyCounter - RecCounter; i++) {
+                  received = true;
+                  ActionEvent temp = RedoStack.pop();
+                  mainWindow.applyActionEvent(temp);
+                  UndoStack.push(temp.invert());
+                }
+                MyCounter++;
+              }
             }
             //RIGHT FREAKIN HERE
           }
@@ -432,39 +570,41 @@ public class MainActivity1 extends Activity
         {
           sessionNames.add(s.name());
         }
-        final AlertDialog.Builder builder = new AlertDialog.Builder(
-            MainActivity1.this);
-          
-          builder.setTitle("Choose Session").setItems(
-            sessionNames.toArray(new String[sessionList.size()]),
-            new DialogInterface.OnClickListener()
-            {
-              @Override
-              public void onClick(DialogInterface dialog, int which)
-              {
-                try
-                {
-                  sessionId = sessionList.get(which).id();
-                  sessionName = sessionList.get(which).name();
-                  myClient.joinSession(sessionId, null);
-                  connectButton.setText(sessionName);
-                }
-                catch( CollabrifyException e )
-                {
-                  Log.e(TAG, "error5", e);
-                }
-              }
-            });
-
-        runOnUiThread(new Runnable()
-        {
-
-          @Override
-          public void run()
-          {
-            builder.show();
+        sessionName = sessionText.getText().toString();
+        int index = -1;
+        for(int i = 0; i < sessionNames.size(); i++) {
+          if(sessionNames.get(i).equals(sessionName)) {
+            index = i;
+            i = sessionNames.size();
           }
-        });
+        }
+        if(index >= 0) {
+          try
+          {
+            sessionId = sessionList.get(index).id();
+            myClient.joinSession(sessionId, null);
+            connectButton.setText("Connected to " + sessionName);
+            setTitle("WeWrite - " + sessionName);
+            //sessionText.setTextIsSelectable(false);
+
+            setContentView(mainWindow);
+            mainWindow.setCursorVisible();
+          }
+          catch( CollabrifyException e )
+          {
+            Log.e(TAG, "error5", e);
+          }
+        }
+        else {
+          runOnUiThread(new Runnable()
+          {
+            @Override
+            public void run()
+            {
+              Toast.makeText(getBaseContext(), "Invalid Session Name", Toast.LENGTH_SHORT).show();
+            }
+          });
+        }
       }
 
       @Override
@@ -478,7 +618,7 @@ public class MainActivity1 extends Activity
           @Override
           public void run()
           {
-            connectButton.setText(sessionName);
+            //connectButton.setText(sessionName);
           }
         });
       }
@@ -499,7 +639,7 @@ public class MainActivity1 extends Activity
           @Override
           public void run()
           {
-            connectButton.setText(sessionName);
+            //connectButton.setText(sessionName);
           }
         });
       }
@@ -526,7 +666,7 @@ public class MainActivity1 extends Activity
     /////////////////////////////////////////////////////////////////////////
     
     textEditor = new Button(this);
-    textEditor.setText("Edit Text");
+    textEditor.setText("Edit Document");
     textEditor.setOnClickListener(new OnClickListener()
     {
 
@@ -534,20 +674,29 @@ public class MainActivity1 extends Activity
       public void onClick(View v)
       {
         setContentView(mainWindow);
+        //setTitle("WeWrite - " + sessionName);
         mainWindow.setCursorVisible();
       }
     });
-    connectScreen.addView(textEditor);
+    textEditor.setTypeface(Typeface.DEFAULT_BOLD, Typeface.BOLD);
+    textEditor.setTextColor(0xffffffff);
+    textEditor.setBackground(gd);
+    connectScreen.addView(textEditor, params);
     
     setContentView(mainWindow);
+    //setContentView(connectScreen);
   }
   public static final int MENU_ADD = Menu.FIRST;
+  public static final int LEAVE = Menu.FIRST+1;
+  public static final int END = Menu.FIRST+2;
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
       super.onCreateOptionsMenu(menu);
 
       menu.add(Menu.NONE, MENU_ADD, Menu.NONE, "Manage Sessions");
+      //menu.add(Menu.NONE, LEAVE, Menu.NONE, "Leave Session");
+      //menu.add(Menu.NONE, END, Menu.NONE, "End Session");
       return true;
   }
 
@@ -558,6 +707,7 @@ public class MainActivity1 extends Activity
           {
               case MENU_ADD:
                 setContentView(connectScreen);
+                /*
                 if(keyboardUp) {
                   mainWindow.setInsertText("edit");
                   final InputMethodManager inputManager = (InputMethodManager)
@@ -565,11 +715,49 @@ public class MainActivity1 extends Activity
                   inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
                       InputMethodManager.HIDE_NOT_ALWAYS);
                   keyboardUp = false;
+                  
+                }*/
+                return true;
+                /*
+              case LEAVE:
+                try
+                {
+                  if(myClient.inSession() )
+                    myClient.leaveSession(false);
+                    connectButton.setText("Connect");
+                    setTitle("WeWrite");
                 }
-              return true;
+                catch(CollabrifyException e)
+                {
+                  Log.e(TAG, "error4", e);
+                }
+                setContentView(connectScreen);
+                return true;
+                
+              case END:
+                try
+                {
+                  if(myClient.inSession() && myClient.currentSessionOwner().getId() ==
+                      myClient.currentSessionParticipantId()) {
+                    Event.Builder event = Event.newBuilder();
+                    event.setId(userId);
+                    event.setEnded(true);
+                    myClient.broadcast(event.build().toByteArray(), "lol");
+                    myClient.leaveSession(true);
+                    connectButton.setText("Connect");
+                    setTitle("WeWrite");
+                  }
+                }
+                catch(CollabrifyException e)
+                {
+                  Log.e(TAG, "error4", e);
+                }
+                setContentView(connectScreen);
+                return true;
+                */
 
-          default:
-              return super.onOptionsItemSelected(item);
+              default:
+                 return super.onOptionsItemSelected(item);
           }
       }
 }

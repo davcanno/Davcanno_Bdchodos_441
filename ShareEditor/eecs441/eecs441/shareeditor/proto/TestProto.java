@@ -60,6 +60,16 @@ public final class TestProto {
      */
     com.google.protobuf.ByteString
         getAftertextBytes();
+
+    // optional bool ended = 5;
+    /**
+     * <code>optional bool ended = 5;</code>
+     */
+    boolean hasEnded();
+    /**
+     * <code>optional bool ended = 5;</code>
+     */
+    boolean getEnded();
   }
   /**
    * Protobuf type {@code eecs441.shareeditor.Event}
@@ -130,6 +140,11 @@ public final class TestProto {
             case 34: {
               bitField0_ |= 0x00000008;
               aftertext_ = input.readBytes();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              ended_ = input.readBool();
               break;
             }
           }
@@ -290,11 +305,28 @@ public final class TestProto {
       }
     }
 
+    // optional bool ended = 5;
+    public static final int ENDED_FIELD_NUMBER = 5;
+    private boolean ended_;
+    /**
+     * <code>optional bool ended = 5;</code>
+     */
+    public boolean hasEnded() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional bool ended = 5;</code>
+     */
+    public boolean getEnded() {
+      return ended_;
+    }
+
     private void initFields() {
       id_ = 0;
       cursorpos_ = 0;
       beforetext_ = "";
       aftertext_ = "";
+      ended_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -324,6 +356,9 @@ public final class TestProto {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBytes(4, getAftertextBytes());
       }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBool(5, ended_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -348,6 +383,10 @@ public final class TestProto {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(4, getAftertextBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, ended_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -473,6 +512,8 @@ public final class TestProto {
         bitField0_ = (bitField0_ & ~0x00000004);
         aftertext_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
+        ended_ = false;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -517,6 +558,10 @@ public final class TestProto {
           to_bitField0_ |= 0x00000008;
         }
         result.aftertext_ = aftertext_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.ended_ = ended_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -548,6 +593,9 @@ public final class TestProto {
           bitField0_ |= 0x00000008;
           aftertext_ = other.aftertext_;
           onChanged();
+        }
+        if (other.hasEnded()) {
+          setEnded(other.getEnded());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -794,6 +842,39 @@ public final class TestProto {
         return this;
       }
 
+      // optional bool ended = 5;
+      private boolean ended_ ;
+      /**
+       * <code>optional bool ended = 5;</code>
+       */
+      public boolean hasEnded() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional bool ended = 5;</code>
+       */
+      public boolean getEnded() {
+        return ended_;
+      }
+      /**
+       * <code>optional bool ended = 5;</code>
+       */
+      public Builder setEnded(boolean value) {
+        bitField0_ |= 0x00000010;
+        ended_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool ended = 5;</code>
+       */
+      public Builder clearEnded() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        ended_ = false;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:eecs441.shareeditor.Event)
     }
 
@@ -819,10 +900,11 @@ public final class TestProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017TestProto.proto\022\023eecs441.shareeditor\"M" +
+      "\n\017TestProto.proto\022\023eecs441.shareeditor\"\\" +
       "\n\005Event\022\n\n\002id\030\001 \002(\005\022\021\n\tcursorpos\030\002 \001(\005\022\022" +
-      "\n\nbeforetext\030\003 \001(\t\022\021\n\taftertext\030\004 \001(\tB\033\n" +
-      "\031eecs441.shareeditor.proto"
+      "\n\nbeforetext\030\003 \001(\t\022\021\n\taftertext\030\004 \001(\t\022\r\n" +
+      "\005ended\030\005 \001(\010B\033\n\031eecs441.shareeditor.prot" +
+      "o"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -834,7 +916,7 @@ public final class TestProto {
           internal_static_eecs441_shareeditor_Event_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_eecs441_shareeditor_Event_descriptor,
-              new java.lang.String[] { "Id", "Cursorpos", "Beforetext", "Aftertext", });
+              new java.lang.String[] { "Id", "Cursorpos", "Beforetext", "Aftertext", "Ended", });
           return null;
         }
       };

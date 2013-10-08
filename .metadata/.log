@@ -6954,3 +6954,4369 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2013-10-01 20:57:18.238
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-01 20:57:18.238
+!MESSAGE A conflict occurred for CTRL+I:
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.indent,Correct Indentation,
+		Corrects the indentation of the selected lines,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7c1cb4e3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.active.elements,Format Active Elements,
+		Format active elements,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@66c0b33e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-01 20:57:18.238
+!MESSAGE A conflict occurred for CTRL+SHIFT+F:
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.format,Format,
+		Format the selected text,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@40a7e2bd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.document,Format,
+		Format selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@62e76ccf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-01 20:57:18.238
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_UP:
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.select.enclosing,Select Enclosing Element,
+		Expand selection to include enclosing element,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4e170774,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.enclosing,Select Enclosing Element,
+		Expand selection to include enclosing element,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@166b21ea,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-01 20:57:18.238
+!MESSAGE A conflict occurred for CTRL+SHIFT+/:
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.add.block.comment,Add Block Comment,
+		Enclose the selection with a block comment,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@49ea78b9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.add.block.comment,Add Block Comment,
+		Add Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2b71dc32,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-01 20:57:18.238
+!MESSAGE A conflict occurred for CTRL+O:
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.show.outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@409bdf98,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.quick_outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3974954b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-01 20:57:18.238
+!MESSAGE A conflict occurred for CTRL+SHIFT+P:
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.goto.matching.bracket,Go to Matching Bracket,
+		Moves the cursor to the matching bracket,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@14f58c65,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.m2e.core.ui.command.addPlugin,Add Maven Plugin,
+		Add Maven Plugin,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4d445a3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.core.runtime.xml,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.goto.matching.bracket,Matching Character,
+		Go to Matching Character,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6e2bc9f7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-01 20:57:18.238
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_UP:
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.goto.previous.member,Go to Previous Member,
+		Move the caret to the previous member of the compilation unit,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@c27d2cf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.previousSibling,Previous Sibling,
+		Go to Previous Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3f2d3e9d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-01 20:57:18.238
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_DOWN:
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.select.last,Restore Last Selection,
+		Restore last selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@a811a45,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.last,Restore Last Selection,
+		Restore last selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@244d9d89,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-01 20:57:18.238
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@21e3ad66,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.toggle.comment,Toggle Comment,
+		Toggle Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@64920fca,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-01 20:57:18.238
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_RIGHT:
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.select.next,Select Next Element,
+		Expand selection to include next sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6a8d14eb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.next,Select Next Element,
+		Expand selection to include next sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@406f860,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-01 20:57:18.238
+!MESSAGE A conflict occurred for CTRL+SHIFT+\:
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.remove.block.comment,Remove Block Comment,
+		Remove the block comment enclosing the selection,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@545886f3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.remove.block.comment,Remove Block Comment,
+		Remove Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7dee78a5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-01 20:57:18.238
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_DOWN:
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.goto.next.member,Go to Next Member,
+		Move the caret to the next member of the compilation unit,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3e6c8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.nextSibling,Next Sibling,
+		Go to Next Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6c897cdd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-01 20:57:18.238
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_LEFT:
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.select.previous,Select Previous Element,
+		Expand selection to include previous sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@24547a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.previous,Select Previous Element,
+		Expand selection to include previous sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2e41b2e9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SESSION 2013-10-02 10:14:12.887 -----------------------------------------------
+eclipse.buildId=4.3.0.I20130605-2000
+java.version=1.7.0_13
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-10-02 10:14:16.971
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2013-10-02 10:14:26.987
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2013-10-02 10:14:27.016
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Ben'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2013-10-06 19:58:04.653 -----------------------------------------------
+eclipse.buildId=4.3.0.I20130605-2000
+java.version=1.7.0_13
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-10-06 19:58:08.860
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.core 4 4 2013-10-06 19:58:12.580
+!MESSAGE Unable to read non-chaining jar cache file
+!STACK 0
+java.io.EOFException
+	at java.io.DataInputStream.readInt(Unknown Source)
+	at org.eclipse.jdt.internal.core.JavaModelManager.loadClasspathListCache(JavaModelManager.java:3112)
+	at org.eclipse.jdt.internal.core.JavaModelManager.<init>(JavaModelManager.java:1578)
+	at org.eclipse.jdt.internal.core.JavaModelManager.<clinit>(JavaModelManager.java:1077)
+	at org.eclipse.jdt.core.JavaCore.start(JavaCore.java:5615)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:300)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Unknown Source)
+	at java.lang.Class.getConstructor0(Unknown Source)
+	at java.lang.Class.newInstance0(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadBundleActivator(AbstractBundle.java:167)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:679)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:300)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1212)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.registry.ViewDescriptor.createView(ViewDescriptor.java:62)
+	at org.eclipse.ui.internal.ViewReference.createPart(ViewReference.java:111)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPart(CompatibilityPart.java:266)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:304)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:877)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:857)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:119)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:333)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:254)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:102)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:71)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:53)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:129)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:949)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:633)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$6.run(PartRenderingEngine.java:526)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:511)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:61)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:949)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:633)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:735)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:706)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:700)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:685)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1096)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:97)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:649)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:735)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:706)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:700)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:685)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:61)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:735)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:706)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:700)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:685)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:61)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:735)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:706)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:700)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:685)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:61)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:735)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:706)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:700)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:685)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:103)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:97)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:77)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:649)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:735)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:706)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:700)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:685)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:61)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:735)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:706)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:700)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:685)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:61)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:735)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:706)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:700)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:685)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1042)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:138)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:610)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+
+!ENTRY org.eclipse.egit.ui 2 0 2013-10-06 19:58:18.387
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2013-10-06 19:58:18.391
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Ben'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 4 2013-10-06 23:56:38.234
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package eecs441.shareeditor;
+
+import com.google.protobuf.*;
+
+import eecs441.shareeditor.proto.TestProto.Event;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.logging.Logger;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import eecs441.shareeditor.R;
+import edu.umich.imlc.android.common.Utils;
+import edu.umich.imlc.collabrify.client.CollabrifyAdapter;
+import edu.umich.imlc.collabrify.client.CollabrifyListener;
+import edu.umich.imlc.collabrify.client.CollabrifyClient;
+import edu.umich.imlc.collabrify.client.CollabrifySession;
+import edu.umich.imlc.collabrify.client.exceptions.CollabrifyException;
+import edu.umich.imlc.collabrify.client.exceptions.ConnectException;
+import edu.umich.imlc.collabrify.client.exceptions.LeaveException;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.InputType;
+import android.text.Layout;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.view.ViewGroup.LayoutParams;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+public class MainActivity1 extends Activity
+{
+  
+  MainView mainWindow;
+
+  LinearLayout connectScreen;
+  boolean keyboardUp;
+  private static String TAG = "ShareEditor";
+  
+  ActionEvent bufferAction;
+  ActionStack UndoStack;
+  ActionStack RedoStack;
+  int MyCounter;
+  
+  
+  Button textEditor;
+  
+  private CollabrifyClient myClient;
+  private Button connectButton;
+  private Button getSessionButton;
+  private Button leaveSessionButton;
+  private Button endSessionButton;
+  private CollabrifyListener collabrifyListener;
+  private ArrayList<String> tags = new ArrayList<String>();
+  private long sessionId;
+  private String sessionName;
+  private int userId;
+  private boolean received = false;
+  
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    builder.setTitle("Enter User ID Number");
+
+    // Set up the input
+    final EditText input = new EditText(this);
+    // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+    input.setInputType(InputType.TYPE_NUMBER_FLAG_SIGNED);
+    builder.setView(input);
+
+    // Set up the buttons
+    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() { 
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            userId = Integer.parseInt(input.getText().toString());
+        }
+    });
+
+    builder.show();
+    keyboardUp = false;
+    final InputMethodManager inputManager = (InputMethodManager)
+        getSystemService(Context.INPUT_METHOD_SERVICE);
+    getWindow().setSoftInputMode(
+        WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+    
+    mainWindow = new MainView(this);
+    
+    bufferAction = new ActionEvent();
+    RedoStack = new ActionStack();
+    UndoStack = new ActionStack();
+    MyCounter = 0;
+    
+   mainWindow.setCursorTouchListener(new OnTouchListener() {
+     private int x;
+     private int y;
+   @Override
+   public boolean onTouch(View v, MotionEvent event) {
+     Layout layout = ((EditText) v).getLayout();
+     switch( event.getAction() ) {
+       case MotionEvent.ACTION_DOWN:
+       x = (int)event.getX();
+       y = (int)event.getY();
+       return true;
+       case MotionEvent.ACTION_UP:
+     if (layout!=null){
+         int line = layout.getLineForVertical(y);
+         int line2 = layout.getLineForVertical((int)event.getY());
+         if((line2 > line+1)||(line2 < line-1)) return true;
+         int offset = layout.getOffsetForHorizontal(line, x);
+         int offset2 = layout.getOffsetForHorizontal(line, (int)event.getX());
+         if((offset2 > offset+2)||(offset2 < offset-2)) return true;
+         mainWindow.setCursorPosition(offset);
+       }
+     return true;
+     }
+     return true;
+   }
+   });
+  
+    mainWindow.setTextChangedListener(new TextWatcher() {
+      public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        if(!received) {
+
+          bufferAction = new ActionEvent();
+
+          bufferAction.setDeleteString(s.toString().substring(start, start+count));
+          MyCounter++;
+          /*if(fixThis.length() != 0) {
+            Event.Builder event = Event.newBuilder();
+            event.setId(userId);
+            event.setCursorpos(mainWindow.getCursorPosition());
+            event.setBeforetext("");
+            event.setAftertext(fixThis);
+            fixThis = "";          
+            try
+            {
+              myClient.broadcast(event.build().toByteArray(), "lol");
+            }
+            catch( CollabrifyException e1 )
+            {
+              e1.printStackTrace();
+            }
+          }
+          removeText += s.toString().substring(start, start+count);*/
+        }
+
+      }
+
+      @Override
+      public void afterTextChanged(Editable arg0)
+      {
+        received = false;
+      }
+
+      @Override
+      public void onTextChanged(CharSequence s, int start, int before, int count)
+      {
+        if(!received) {
+          bufferAction.setInsertString(s.toString().substring(start,start+count));
+          bufferAction.setCursorStart(start);
+          Event.Builder event = Event.newBuilder();
+          event.setId(userId);
+          event.setCursorpos(bufferAction.getCursorStart());
+          event.setBeforetext(bufferAction.delString());
+          event.setAftertext(bufferAction.insString());           
+          try
+          {
+            myClient.broadcast(event.build().toByteArray(), "lol");
+            //MyCounter++;
+          }
+          catch( CollabrifyException e1 )
+          {
+            e1.printStackTrace();
+          }
+          RedoStack.clear();
+          UndoStack.push(bufferAction.invert());
+          /*if(removeText.length() != 0) {
+            Event.Builder event = Event.newBuilder();
+            event.setId(userId);
+            event.setCursorpos(mainWindow.getCursorPosition()-count);
+            event.setBeforetext(removeText);
+            event.setAftertext("");  
+            removeText="";         
+            try
+            {
+              myClient.broadcast(event.build().toByteArray(), "lol");
+            }
+            catch( CollabrifyException e1 )
+            {
+              e1.printStackTrace();
+            }
+          }
+          System.out.println("HERE"+s.toString().substring(start, start+count));
+          fixThis += s.toString().substring(start, start+count);*/
+        }
+        //received = false;
+      }
+    });
+    
+    mainWindow.setInsertClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View ClickedButton) {
+        if(keyboardUp) {
+          mainWindow.setInsertText("edit");
+          inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+              InputMethodManager.HIDE_NOT_ALWAYS);
+          keyboardUp = false;
+        } else {
+        inputManager.showSoftInput(getCurrentFocus(),  0);
+        mainWindow.setInsertText("hide");
+        keyboardUp = true;
+        }
+      }
+    });   
+    
+    mainWindow.setCursorRightListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(mainWindow.getCursorPosition() < mainWindow.getLength()) {
+          mainWindow.setCursorPosition(mainWindow.getCursorPosition()+1);
+        }
+      }
+    });
+    mainWindow.setCursorLeftListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(mainWindow.getCursorPosition()> 0) {
+          mainWindow.setCursorPosition(mainWindow.getCursorPosition()-1);
+        }
+      }
+    });
+    mainWindow.setUndoClickListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(!UndoStack.isEmpty()) {
+          ActionEvent temp = UndoStack.pop();
+          received = true;
+          mainWindow.applyActionEvent(temp);
+          RedoStack.push(temp.invert());
+          Event.Builder event = Event.newBuilder();
+          event.setId(userId);
+          event.setCursorpos(temp.getCursorStart());
+          event.setBeforetext(temp.delString());
+          event.setAftertext(temp.insString());           
+          try
+          {
+            myClient.broadcast(event.build().toByteArray(), "lol");
+            MyCounter++;
+          }
+          catch( CollabrifyException e1 )
+          {
+            e1.printStackTrace();
+          }
+        }
+      }
+    });
+    mainWindow.setRedoClickListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(!RedoStack.isEmpty()) {
+          ActionEvent temp = RedoStack.pop();
+          received = true;
+          mainWindow.applyActionEvent(temp);
+          UndoStack.push(temp.invert());
+          Event.Builder event = Event.newBuilder();
+          event.setId(userId);
+          event.setCursorpos(temp.getCursorStart());
+          event.setBeforetext(temp.delString());
+          event.setAftertext(temp.insString());           
+          try
+          {
+            myClient.broadcast(event.build().toByteArray(), "lol");
+            MyCounter++;
+          }
+          catch( CollabrifyException e1 )
+          {
+            e1.printStackTrace();
+          }
+        }
+      }
+    });
+    setTitle("Text Editor");
+    
+    /////////////////////////////////////////////////////////////////////////
+    /////       Creation of secondary screen for connections            /////
+    /////////////////////////////////////////////////////////////////////////
+    
+    connectScreen = new LinearLayout(this);
+    connectScreen.setOrientation(LinearLayout.VERTICAL);
+    connectScreen.setWeightSum(100f);
+    setTitle("Collabrify Sessions");
+    
+    connectButton = new Button(this);
+    connectButton.setText("Connect");
+    getSessionButton = new Button(this);
+    getSessionButton.setText("Join");
+    leaveSessionButton = new Button(this);
+    leaveSessionButton.setText("Leave");
+    endSessionButton = new Button(this);
+    endSessionButton.setText("End");
+    // enable logging
+    
+    //Logger.getLogger("edu.umich.imlc.collabrify.client")
+    //    .setLevel(LOGGING_LEVEL);
+
+    connectButton.setOnClickListener(new OnClickListener()
+    {
+
+      @Override
+      public void onClick(View v)
+      {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity1.this);
+        builder.setTitle("Enter User ID Number");
+
+        // Set up the input
+        final EditText input = new EditText(MainActivity1.this);
+        // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+        input.setInputType(InputType.TYPE_NUMBER_FLAG_SIGNED);
+        builder.setView(input);
+
+        // Set up the buttons
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() { 
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                sessionName = input.getText().toString();
+                try
+                {
+                  myClient.createSession(sessionName, tags, null, 0);
+                }
+                catch( ConnectException e )
+                {
+                  e.printStackTrace();
+                }
+                catch( CollabrifyException e )
+                {
+                  e.printStackTrace();
+                }
+                Log.i(TAG, "Session name is " + sessionName);
+                connectButton.setText("Connected to " + sessionName);
+                setTitle("WeWrite - " + sessionName);
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+          @Override
+          public void onClick(DialogInterface dialog, int which) {
+              dialog.cancel();
+          }
+      });
+        builder.show();
+      }
+    });
+
+    getSessionButton.setOnClickListener(new OnClickListener()
+    {
+
+      @Override
+      public void onClick(View v)
+      {
+        try
+        {
+          myClient.requestSessionList(tags);
+        }
+        catch( Exception e )
+        {
+          Log.e(TAG, "error3", e);
+        }
+      }
+    });
+
+    leaveSessionButton.setOnClickListener(new OnClickListener()
+    {
+      @Override
+      public void onClick(View v)
+      {
+        try
+        {
+          if( myClient.inSession() )
+            myClient.leaveSession(false);
+            connectButton.setText("Connect");
+        }
+        catch( CollabrifyException e )
+        {
+          Log.e(TAG, "error4", e);
+        }
+      }
+    });
+    
+    endSessionButton.setOnClickListener(new OnClickListener()
+    {
+      @Override
+      public void onClick(View v)
+      {
+        try
+        {
+          if( myClient.inSession() )
+            myClient.currentSessionEnded();
+            connectButton.setText("Connect");
+        }
+        catch( CollabrifyException e )
+        {
+          Log.e(TAG, "error4", e);
+        }
+      }
+    });
+
+    connectScreen.addView(connectButton);
+    connectScreen.addView(getSessionButton);
+    connectScreen.addView(leaveSessionButton);
+    connectScreen.addView(endSessionButton);
+    
+    collabrifyListener = new CollabrifyAdapter()
+    {
+      @Override
+      public void onDisconnect()
+      {
+        Log.i(TAG, "disconnected");
+        runOnUiThread(new Runnable()
+        {
+
+          @Override
+          public void run()
+          {
+            connectButton.setText("Connect");
+          }
+        });
+      }
+
+      @Override
+      public void onReceiveEvent(final long orderId, int subId,
+          String eventType, final byte[] data)
+      {
+        Utils.printMethodName(TAG);
+        Log.d(TAG, "RECEIVED SUB ID:" + subId);
+        runOnUiThread(new Runnable()
+        {
+          @Override
+          public void run()
+          {
+            Utils.printMethodName(TAG);
+            //String message = new String(data);
+            System.out.println("RECVD MESSG?");           
+            Event eventRecvd = null;
+            try
+            {
+              eventRecvd = Event.parseFrom(data);
+            }
+            catch( InvalidProtocolBufferException e )
+            {
+              e.printStackTrace();
+            }
+            System.out.println("#########" + userId + " " + eventRecvd.getId());
+            //DO ACTION HERE
+            if(eventRecvd.getId() != userId) {
+              if(eventRecvd.hasEnded()) {
+                connectButton.setText("Connect");
+                setTitle("WeWrite");
+                try
+                {
+                  myClient.leaveSession(false);
+                }
+                catch( LeaveException e )
+                {
+                  // TODO Auto-generated catch block
+                  e.printStackTrace();
+                }
+                catch( CollabrifyException e )
+                {
+                  // TODO Auto-generated catch block
+                  e.printStackTrace();
+                }
+                setContentView(connectScreen); 
+              }
+              else {
+                ActionEvent A = new ActionEvent();
+                if(eventRecvd.hasAftertext())
+                  A.setInsertString(eventRecvd.getAftertext());
+                if(eventRecvd.hasBeforetext())
+                  A.setDeleteString(eventRecvd.getBeforetext());
+                if(eventRecvd.hasCursorpos())
+                  A.setCursorStart(eventRecvd.getCursorpos());
+                System.out.println("Cursor: " + eventRecvd.getCursorpos());
+              
+     ///////////////LOOK HERE SYNTAX IS NOT RIGHT BUT I DONT KNOW IT////////////////////////////
+                int RecCounter = (int) orderId; ///Change this line to what collabrify sends
+                //received = true;
+                for(int i = 0; i < MyCounter - RecCounter; i++) {
+                  received = true;
+                  ActionEvent temp = UndoStack.pop();
+                  mainWindow.applyActionEvent(temp);
+                  RedoStack.push(temp.invert());
+                }
+                received = true;
+                mainWindow.applyActionEvent(A);
+                UndoStack.ApplyActionEvent(A);
+                RedoStack.ApplyActionEvent(A);
+               for(int i = 0; i < MyCounter - RecCounter; i++) {
+                  received = true;
+                  ActionEvent temp = RedoStack.pop();
+                  mainWindow.applyActionEvent(temp);
+                  UndoStack.push(temp.invert());
+                }
+                MyCounter++;
+              }
+            }
+            //RIGHT FREAKIN HERE
+          }
+        });
+      }
+
+      @Override
+      public void onReceiveSessionList(final List<CollabrifySession> sessionList)
+      {
+        if( sessionList.isEmpty() )
+        {
+          Log.i(TAG, "No session available");
+          return;
+        }
+        final List<String> sessionNames = new ArrayList<String>();
+        for( CollabrifySession s : sessionList )
+        {
+          sessionNames.add(s.name());
+        }
+        final AlertDialog.Builder builder = new AlertDialog.Builder(
+            MainActivity1.this);
+          
+          builder.setTitle("Choose Session").setItems(
+            sessionNames.toArray(new String[sessionList.size()]),
+            new DialogInterface.OnClickListener()
+            {
+              @Override
+              public void onClick(DialogInterface dialog, int which)
+              {
+                try
+                {
+                  sessionId = sessionList.get(which).id();
+                  sessionName = sessionList.get(which).name();
+                  myClient.joinSession(sessionId, null);
+                  connectButton.setText("Connected to " + sessionName);
+                  setTitle("WeWrite - " + sessionName);
+                  MyCounter = 0;
+                }
+                catch( CollabrifyException e )
+                {
+                  Log.e(TAG, "error5", e);
+                }
+              }
+            });
+          //builder.setTitle("Choose Session");
+          final EditText input = new EditText(MainActivity1.this);
+          // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+          input.setInputType(InputType.TYPE_CLASS_TEXT);
+          //builder.setView(input);
+
+          // Set up the buttons
+          DialogInterface.OnClickListener positive = new DialogInterface.OnClickListener() { 
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                final String m_Text = input.getText().toString();
+                if(sessionNames.contains(m_Text)) {
+                  try
+                  {
+                    int index = -1;
+                    for(int i = 0; i < sessionNames.size(); i++) {
+                      if(sessionNames.get(i).equals(m_Text)) {
+                        index = i;
+                        i = sessionNames.size();
+                      }
+                    }
+                    if(index >= 0) {
+                    sessionId = sessionList.get(index).id();
+                    sessionName = sessionList.get(index).name();
+                    myClient.joinSession(sessionId, null);
+                    connectButton.setText("Connected to " + sessionName);
+                    setTitle("WeWrite - " + sessionName);
+
+                    setContentView(mainWindow);
+                  }
+                  catch( CollabrifyException e )
+                  {
+                    Log.e(TAG, "error5", e);
+                  }
+                }
+                else {
+                  /*final AlertDialog.Builder builder2 = new AlertDialog.Builder(
+                      MainActivity1.this);
+                    builder2.setTitle("Not a Valid Session");
+
+                    // Set up the buttons
+                    builder2.setPositiveButton("OK", new DialogInterface.OnClickListener() { 
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {}
+                    });
+                    builder2.show(); */
+                }
+            }
+        };
+        DialogInterface.OnClickListener negative = new DialogInterface.OnClickListener() {
+          @Override
+          public void onClick(DialogInterface dialog, int which) {
+              dialog.cancel();
+          }
+      };
+          builder.setTitle("Choose Session").setView(input).setPositiveButton("OK", positive).setNegativeButton("Cancel", negative);
+        
+        runOnUiThread(new Runnable()
+        {
+
+          @Override
+          public void run()
+          {
+            builder.show();
+          }
+        });
+        
+          //builder.show();
+      }
+
+      @Override
+      public void onSessionCreated(long id)
+      {
+        Log.i(TAG, "Session created, id: " + id);
+        sessionId = id;
+        runOnUiThread(new Runnable()
+        {
+
+          @Override
+          public void run()
+          {
+            //connectButton.setText(sessionName);
+          }
+        });
+      }
+
+      @Override
+      public void onError(CollabrifyException e)
+      {
+        Log.e(TAG, "error1", e);
+      }
+
+      @Override
+      public void onSessionJoined(long maxOrderId, long baseFileSize)
+      {
+        Log.i(TAG, "Session Joined");
+        runOnUiThread(new Runnable()
+        {
+
+          @Override
+          public void run()
+          {
+            connectButton.setText(sessionName);
+          }
+        });
+      }
+    };
+
+
+    boolean getLatestEvent = false;
+    
+    // Instantiate client object
+    try
+    {
+      myClient = new CollabrifyClient(this, "gocannon16@gmail.com", "user display name",
+          "441fall2013@umich.edu", "XY3721425NoScOpE", getLatestEvent,
+          collabrifyListener);
+    }
+    catch( CollabrifyException e )
+    {
+      e.printStackTrace();
+    }
+    tags.add("sample");
+    
+    /////////////////////////////////////////////////////////////////////////
+    /////       Protocol buffer workspace for now                       /////
+    /////////////////////////////////////////////////////////////////////////
+    
+    textEditor = new Button(this);
+    textEditor.setText("Edit Text");
+    textEditor.setOnClickListener(new OnClickListener()
+    {
+
+      @Override
+      public void onClick(View v)
+      {
+        setContentView(mainWindow);
+        //setTitle("WeWrite - " + sessionName);
+        mainWindow.setCursorVisible();
+      }
+    });
+    connectScreen.addView(textEditor);
+    
+    setContentView(mainWindow);
+  }
+  public static final int MENU_ADD = Menu.FIRST;
+  public static final int LEAVE = Menu.FIRST+1;
+  public static final int END = Menu.FIRST+2;
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+      super.onCreateOptionsMenu(menu);
+
+      menu.add(Menu.NONE, MENU_ADD, Menu.NONE, "Manage Sessions");
+      //menu.add(Menu.NONE, LEAVE, Menu.NONE, "Leave Session");
+      //menu.add(Menu.NONE, END, Menu.NONE, "End Session");
+      return true;
+  }
+
+     @Override
+      public boolean onOptionsItemSelected(MenuItem item)
+      {
+          switch(item.getItemId())
+          {
+              case MENU_ADD:
+                setContentView(connectScreen);
+                /*
+                if(keyboardUp) {
+                  mainWindow.setInsertText("edit");
+                  final InputMethodManager inputManager = (InputMethodManager)
+                      getSystemService(Context.INPUT_METHOD_SERVICE);
+                  inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                      InputMethodManager.HIDE_NOT_ALWAYS);
+                  keyboardUp = false;
+                  
+                }*/
+                return true;
+                /*
+              case LEAVE:
+                try
+                {
+                  if(myClient.inSession() )
+                    myClient.leaveSession(false);
+                    connectButton.setText("Connect");
+                    setTitle("WeWrite");
+                }
+                catch(CollabrifyException e)
+                {
+                  Log.e(TAG, "error4", e);
+                }
+                setContentView(connectScreen);
+                return true;
+                
+              case END:
+                try
+                {
+                  if(myClient.inSession() && myClient.currentSessionOwner().getId() ==
+                      myClient.currentSessionParticipantId()) {
+                    Event.Builder event = Event.newBuilder();
+                    event.setId(userId);
+                    event.setEnded(true);
+                    myClient.broadcast(event.build().toByteArray(), "lol");
+                    myClient.leaveSession(true);
+                    connectButton.setText("Connect");
+                    setTitle("WeWrite");
+                  }
+                }
+                catch(CollabrifyException e)
+                {
+                  Log.e(TAG, "error4", e);
+                }
+                setContentView(connectScreen);
+                return true;
+                */
+
+              default:
+                 return super.onOptionsItemSelected(item);
+          }
+      }
+}
+
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2648)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3001)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToFieldDeclaration(ASTConverter.java:2893)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleFieldDeclaration(ASTConverter.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:318)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:3051)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:403)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:535)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:325)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1562)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2474)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:537)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:186)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2679)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1222)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:291)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1207)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:807)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:537)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:480)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:470)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:470)
+	at org.eclipse.jdt.ui.SharedASTProvider.getAST(SharedASTProvider.java:128)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:170)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2013-10-06 23:56:38.289
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2648)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3001)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToFieldDeclaration(ASTConverter.java:2893)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleFieldDeclaration(ASTConverter.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:318)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:3051)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:403)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:535)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:325)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1562)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2474)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:537)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:186)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2679)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1222)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:291)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1207)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:807)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:537)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:480)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:470)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:470)
+	at org.eclipse.jdt.ui.SharedASTProvider.getAST(SharedASTProvider.java:128)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:170)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2013-10-06 23:56:38.291
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2648)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3001)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToFieldDeclaration(ASTConverter.java:2893)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleFieldDeclaration(ASTConverter.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:318)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:3051)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:403)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:535)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:325)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1562)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2474)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:537)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:186)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2679)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1222)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:291)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1207)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:807)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:537)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:480)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:470)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:470)
+	at org.eclipse.jdt.ui.SharedASTProvider.getAST(SharedASTProvider.java:128)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:170)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.jdt.core 4 4 2013-10-06 23:56:39.019
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package eecs441.shareeditor;
+
+import com.google.protobuf.*;
+
+import eecs441.shareeditor.proto.TestProto.Event;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.logging.Logger;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import eecs441.shareeditor.R;
+import edu.umich.imlc.android.common.Utils;
+import edu.umich.imlc.collabrify.client.CollabrifyAdapter;
+import edu.umich.imlc.collabrify.client.CollabrifyListener;
+import edu.umich.imlc.collabrify.client.CollabrifyClient;
+import edu.umich.imlc.collabrify.client.CollabrifySession;
+import edu.umich.imlc.collabrify.client.exceptions.CollabrifyException;
+import edu.umich.imlc.collabrify.client.exceptions.ConnectException;
+import edu.umich.imlc.collabrify.client.exceptions.LeaveException;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.InputType;
+import android.text.Layout;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.view.ViewGroup.LayoutParams;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+public class MainActivity1 extends Activity
+{
+  
+  MainView mainWindow;
+
+  LinearLayout connectScreen;
+  boolean keyboardUp;
+  private static String TAG = "ShareEditor";
+  
+  ActionEvent bufferAction;
+  ActionStack UndoStack;
+  ActionStack RedoStack;
+  int MyCounter;
+  
+  
+  Button textEditor;
+  
+  private CollabrifyClient myClient;
+  private Button connectButton;
+  private Button getSessionButton;
+  private Button leaveSessionButton;
+  private Button endSessionButton;
+  private CollabrifyListener collabrifyListener;
+  private ArrayList<String> tags = new ArrayList<String>();
+  private long sessionId;
+  private String sessionName;
+  private int userId;
+  private boolean received = false;
+  
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    builder.setTitle("Enter User ID Number");
+
+    // Set up the input
+    final EditText input = new EditText(this);
+    // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+    input.setInputType(InputType.TYPE_NUMBER_FLAG_SIGNED);
+    builder.setView(input);
+
+    // Set up the buttons
+    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() { 
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            userId = Integer.parseInt(input.getText().toString());
+        }
+    });
+
+    builder.show();
+    keyboardUp = false;
+    final InputMethodManager inputManager = (InputMethodManager)
+        getSystemService(Context.INPUT_METHOD_SERVICE);
+    getWindow().setSoftInputMode(
+        WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+    
+    mainWindow = new MainView(this);
+    
+    bufferAction = new ActionEvent();
+    RedoStack = new ActionStack();
+    UndoStack = new ActionStack();
+    MyCounter = 0;
+    
+   mainWindow.setCursorTouchListener(new OnTouchListener() {
+     private int x;
+     private int y;
+   @Override
+   public boolean onTouch(View v, MotionEvent event) {
+     Layout layout = ((EditText) v).getLayout();
+     switch( event.getAction() ) {
+       case MotionEvent.ACTION_DOWN:
+       x = (int)event.getX();
+       y = (int)event.getY();
+       return true;
+       case MotionEvent.ACTION_UP:
+     if (layout!=null){
+         int line = layout.getLineForVertical(y);
+         int line2 = layout.getLineForVertical((int)event.getY());
+         if((line2 > line+1)||(line2 < line-1)) return true;
+         int offset = layout.getOffsetForHorizontal(line, x);
+         int offset2 = layout.getOffsetForHorizontal(line, (int)event.getX());
+         if((offset2 > offset+2)||(offset2 < offset-2)) return true;
+         mainWindow.setCursorPosition(offset);
+       }
+     return true;
+     }
+     return true;
+   }
+   });
+  
+    mainWindow.setTextChangedListener(new TextWatcher() {
+      public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        if(!received) {
+
+          bufferAction = new ActionEvent();
+
+          bufferAction.setDeleteString(s.toString().substring(start, start+count));
+          MyCounter++;
+          /*if(fixThis.length() != 0) {
+            Event.Builder event = Event.newBuilder();
+            event.setId(userId);
+            event.setCursorpos(mainWindow.getCursorPosition());
+            event.setBeforetext("");
+            event.setAftertext(fixThis);
+            fixThis = "";          
+            try
+            {
+              myClient.broadcast(event.build().toByteArray(), "lol");
+            }
+            catch( CollabrifyException e1 )
+            {
+              e1.printStackTrace();
+            }
+          }
+          removeText += s.toString().substring(start, start+count);*/
+        }
+
+      }
+
+      @Override
+      public void afterTextChanged(Editable arg0)
+      {
+        received = false;
+      }
+
+      @Override
+      public void onTextChanged(CharSequence s, int start, int before, int count)
+      {
+        if(!received) {
+          bufferAction.setInsertString(s.toString().substring(start,start+count));
+          bufferAction.setCursorStart(start);
+          Event.Builder event = Event.newBuilder();
+          event.setId(userId);
+          event.setCursorpos(bufferAction.getCursorStart());
+          event.setBeforetext(bufferAction.delString());
+          event.setAftertext(bufferAction.insString());           
+          try
+          {
+            myClient.broadcast(event.build().toByteArray(), "lol");
+            //MyCounter++;
+          }
+          catch( CollabrifyException e1 )
+          {
+            e1.printStackTrace();
+          }
+          RedoStack.clear();
+          UndoStack.push(bufferAction.invert());
+          /*if(removeText.length() != 0) {
+            Event.Builder event = Event.newBuilder();
+            event.setId(userId);
+            event.setCursorpos(mainWindow.getCursorPosition()-count);
+            event.setBeforetext(removeText);
+            event.setAftertext("");  
+            removeText="";         
+            try
+            {
+              myClient.broadcast(event.build().toByteArray(), "lol");
+            }
+            catch( CollabrifyException e1 )
+            {
+              e1.printStackTrace();
+            }
+          }
+          System.out.println("HERE"+s.toString().substring(start, start+count));
+          fixThis += s.toString().substring(start, start+count);*/
+        }
+        //received = false;
+      }
+    });
+    
+    mainWindow.setInsertClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View ClickedButton) {
+        if(keyboardUp) {
+          mainWindow.setInsertText("edit");
+          inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+              InputMethodManager.HIDE_NOT_ALWAYS);
+          keyboardUp = false;
+        } else {
+        inputManager.showSoftInput(getCurrentFocus(),  0);
+        mainWindow.setInsertText("hide");
+        keyboardUp = true;
+        }
+      }
+    });   
+    
+    mainWindow.setCursorRightListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(mainWindow.getCursorPosition() < mainWindow.getLength()) {
+          mainWindow.setCursorPosition(mainWindow.getCursorPosition()+1);
+        }
+      }
+    });
+    mainWindow.setCursorLeftListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(mainWindow.getCursorPosition()> 0) {
+          mainWindow.setCursorPosition(mainWindow.getCursorPosition()-1);
+        }
+      }
+    });
+    mainWindow.setUndoClickListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(!UndoStack.isEmpty()) {
+          ActionEvent temp = UndoStack.pop();
+          received = true;
+          mainWindow.applyActionEvent(temp);
+          RedoStack.push(temp.invert());
+          Event.Builder event = Event.newBuilder();
+          event.setId(userId);
+          event.setCursorpos(temp.getCursorStart());
+          event.setBeforetext(temp.delString());
+          event.setAftertext(temp.insString());           
+          try
+          {
+            myClient.broadcast(event.build().toByteArray(), "lol");
+            MyCounter++;
+          }
+          catch( CollabrifyException e1 )
+          {
+            e1.printStackTrace();
+          }
+        }
+      }
+    });
+    mainWindow.setRedoClickListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(!RedoStack.isEmpty()) {
+          ActionEvent temp = RedoStack.pop();
+          received = true;
+          mainWindow.applyActionEvent(temp);
+          UndoStack.push(temp.invert());
+          Event.Builder event = Event.newBuilder();
+          event.setId(userId);
+          event.setCursorpos(temp.getCursorStart());
+          event.setBeforetext(temp.delString());
+          event.setAftertext(temp.insString());           
+          try
+          {
+            myClient.broadcast(event.build().toByteArray(), "lol");
+            MyCounter++;
+          }
+          catch( CollabrifyException e1 )
+          {
+            e1.printStackTrace();
+          }
+        }
+      }
+    });
+    setTitle("Text Editor");
+    
+    /////////////////////////////////////////////////////////////////////////
+    /////       Creation of secondary screen for connections            /////
+    /////////////////////////////////////////////////////////////////////////
+    
+    connectScreen = new LinearLayout(this);
+    connectScreen.setOrientation(LinearLayout.VERTICAL);
+    connectScreen.setWeightSum(100f);
+    setTitle("Collabrify Sessions");
+    
+    connectButton = new Button(this);
+    connectButton.setText("Connect");
+    getSessionButton = new Button(this);
+    getSessionButton.setText("Join");
+    leaveSessionButton = new Button(this);
+    leaveSessionButton.setText("Leave");
+    endSessionButton = new Button(this);
+    endSessionButton.setText("End");
+    // enable logging
+    
+    //Logger.getLogger("edu.umich.imlc.collabrify.client")
+    //    .setLevel(LOGGING_LEVEL);
+
+    connectButton.setOnClickListener(new OnClickListener()
+    {
+
+      @Override
+      public void onClick(View v)
+      {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity1.this);
+        builder.setTitle("Enter User ID Number");
+
+        // Set up the input
+        final EditText input = new EditText(MainActivity1.this);
+        // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+        input.setInputType(InputType.TYPE_NUMBER_FLAG_SIGNED);
+        builder.setView(input);
+
+        // Set up the buttons
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() { 
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                sessionName = input.getText().toString();
+                try
+                {
+                  myClient.createSession(sessionName, tags, null, 0);
+                }
+                catch( ConnectException e )
+                {
+                  e.printStackTrace();
+                }
+                catch( CollabrifyException e )
+                {
+                  e.printStackTrace();
+                }
+                Log.i(TAG, "Session name is " + sessionName);
+                connectButton.setText("Connected to " + sessionName);
+                setTitle("WeWrite - " + sessionName);
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+          @Override
+          public void onClick(DialogInterface dialog, int which) {
+              dialog.cancel();
+          }
+      });
+        builder.show();
+      }
+    });
+
+    getSessionButton.setOnClickListener(new OnClickListener()
+    {
+
+      @Override
+      public void onClick(View v)
+      {
+        try
+        {
+          myClient.requestSessionList(tags);
+        }
+        catch( Exception e )
+        {
+          Log.e(TAG, "error3", e);
+        }
+      }
+    });
+
+    leaveSessionButton.setOnClickListener(new OnClickListener()
+    {
+      @Override
+      public void onClick(View v)
+      {
+        try
+        {
+          if( myClient.inSession() )
+            myClient.leaveSession(false);
+            connectButton.setText("Connect");
+        }
+        catch( CollabrifyException e )
+        {
+          Log.e(TAG, "error4", e);
+        }
+      }
+    });
+    
+    endSessionButton.setOnClickListener(new OnClickListener()
+    {
+      @Override
+      public void onClick(View v)
+      {
+        try
+        {
+          if( myClient.inSession() )
+            myClient.currentSessionEnded();
+            connectButton.setText("Connect");
+        }
+        catch( CollabrifyException e )
+        {
+          Log.e(TAG, "error4", e);
+        }
+      }
+    });
+
+    connectScreen.addView(connectButton);
+    connectScreen.addView(getSessionButton);
+    connectScreen.addView(leaveSessionButton);
+    connectScreen.addView(endSessionButton);
+    
+    collabrifyListener = new CollabrifyAdapter()
+    {
+      @Override
+      public void onDisconnect()
+      {
+        Log.i(TAG, "disconnected");
+        runOnUiThread(new Runnable()
+        {
+
+          @Override
+          public void run()
+          {
+            connectButton.setText("Connect");
+          }
+        });
+      }
+
+      @Override
+      public void onReceiveEvent(final long orderId, int subId,
+          String eventType, final byte[] data)
+      {
+        Utils.printMethodName(TAG);
+        Log.d(TAG, "RECEIVED SUB ID:" + subId);
+        runOnUiThread(new Runnable()
+        {
+          @Override
+          public void run()
+          {
+            Utils.printMethodName(TAG);
+            //String message = new String(data);
+            System.out.println("RECVD MESSG?");           
+            Event eventRecvd = null;
+            try
+            {
+              eventRecvd = Event.parseFrom(data);
+            }
+            catch( InvalidProtocolBufferException e )
+            {
+              e.printStackTrace();
+            }
+            System.out.println("#########" + userId + " " + eventRecvd.getId());
+            //DO ACTION HERE
+            if(eventRecvd.getId() != userId) {
+              if(eventRecvd.hasEnded()) {
+                connectButton.setText("Connect");
+                setTitle("WeWrite");
+                try
+                {
+                  myClient.leaveSession(false);
+                }
+                catch( LeaveException e )
+                {
+                  // TODO Auto-generated catch block
+                  e.printStackTrace();
+                }
+                catch( CollabrifyException e )
+                {
+                  // TODO Auto-generated catch block
+                  e.printStackTrace();
+                }
+                setContentView(connectScreen); 
+              }
+              else {
+                ActionEvent A = new ActionEvent();
+                if(eventRecvd.hasAftertext())
+                  A.setInsertString(eventRecvd.getAftertext());
+                if(eventRecvd.hasBeforetext())
+                  A.setDeleteString(eventRecvd.getBeforetext());
+                if(eventRecvd.hasCursorpos())
+                  A.setCursorStart(eventRecvd.getCursorpos());
+                System.out.println("Cursor: " + eventRecvd.getCursorpos());
+              
+     ///////////////LOOK HERE SYNTAX IS NOT RIGHT BUT I DONT KNOW IT////////////////////////////
+                int RecCounter = (int) orderId; ///Change this line to what collabrify sends
+                //received = true;
+                for(int i = 0; i < MyCounter - RecCounter; i++) {
+                  received = true;
+                  ActionEvent temp = UndoStack.pop();
+                  mainWindow.applyActionEvent(temp);
+                  RedoStack.push(temp.invert());
+                }
+                received = true;
+                mainWindow.applyActionEvent(A);
+                UndoStack.ApplyActionEvent(A);
+                RedoStack.ApplyActionEvent(A);
+               for(int i = 0; i < MyCounter - RecCounter; i++) {
+                  received = true;
+                  ActionEvent temp = RedoStack.pop();
+                  mainWindow.applyActionEvent(temp);
+                  UndoStack.push(temp.invert());
+                }
+                MyCounter++;
+              }
+            }
+            //RIGHT FREAKIN HERE
+          }
+        });
+      }
+
+      @Override
+      public void onReceiveSessionList(final List<CollabrifySession> sessionList)
+      {
+        if( sessionList.isEmpty() )
+        {
+          Log.i(TAG, "No session available");
+          return;
+        }
+        final List<String> sessionNames = new ArrayList<String>();
+        for( CollabrifySession s : sessionList )
+        {
+          sessionNames.add(s.name());
+        }
+        final AlertDialog.Builder builder = new AlertDialog.Builder(
+            MainActivity1.this);
+          
+          builder.setTitle("Choose Session").setItems(
+            sessionNames.toArray(new String[sessionList.size()]),
+            new DialogInterface.OnClickListener()
+            {
+              @Override
+              public void onClick(DialogInterface dialog, int which)
+              {
+                try
+                {
+                  sessionId = sessionList.get(which).id();
+                  sessionName = sessionList.get(which).name();
+                  myClient.joinSession(sessionId, null);
+                  connectButton.setText("Connected to " + sessionName);
+                  setTitle("WeWrite - " + sessionName);
+                  MyCounter = 0;
+                }
+                catch( CollabrifyException e )
+                {
+                  Log.e(TAG, "error5", e);
+                }
+              }
+            });
+          //builder.setTitle("Choose Session");
+          final EditText input = new EditText(MainActivity1.this);
+          // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+          input.setInputType(InputType.TYPE_CLASS_TEXT);
+          //builder.setView(input);
+
+          // Set up the buttons
+          DialogInterface.OnClickListener positive = new DialogInterface.OnClickListener() { 
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                final String m_Text = input.getText().toString();
+                if(sessionNames.contains(m_Text)) {
+                  try
+                  {
+                    int index = -1;
+                    for(int i = 0; i < sessionNames.size(); i++) {
+                      if(sessionNames.get(i).equals(m_Text)) {
+                        index = i;
+                        i = sessionNames.size();
+                      }
+                    }
+                    if(index >= 0) {
+                    sessionId = sessionList.get(index).id();
+                    sessionName = sessionList.get(index).name();
+                    myClient.joinSession(sessionId, null);
+                    connectButton.setText("Connected to " + sessionName);
+                    setTitle("WeWrite - " + sessionName);
+
+                    setContentView(mainWindow);
+                  }
+                  catch( CollabrifyException e )
+                  {
+                    Log.e(TAG, "error5", e);
+                  }
+                }
+                else {
+                  /*final AlertDialog.Builder builder2 = new AlertDialog.Builder(
+                      MainActivity1.this);
+                    builder2.setTitle("Not a Valid Session");
+
+                    // Set up the buttons
+                    builder2.setPositiveButton("OK", new DialogInterface.OnClickListener() { 
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {}
+                    });
+                    builder2.show(); */
+                }
+            }
+        };
+        DialogInterface.OnClickListener negative = new DialogInterface.OnClickListener() {
+          @Override
+          public void onClick(DialogInterface dialog, int which) {
+              dialog.cancel();
+          }
+      };
+          builder.setTitle("Choose Session").setView(input).setPositiveButton("OK", positive).setNegativeButton("Cancel", negative);
+        
+        runOnUiThread(new Runnable()
+        {
+
+          @Override
+          public void run()
+          {
+            builder.show();
+          }
+        });
+        
+          //builder.show();
+      }
+
+      @Override
+      public void onSessionCreated(long id)
+      {
+        Log.i(TAG, "Session created, id: " + id);
+        sessionId = id;
+        runOnUiThread(new Runnable()
+        {
+
+          @Override
+          public void run()
+          {
+            //connectButton.setText(sessionName);
+          }
+        });
+      }
+
+      @Override
+      public void onError(CollabrifyException e)
+      {
+        Log.e(TAG, "error1", e);
+      }
+
+      @Override
+      public void onSessionJoined(long maxOrderId, long baseFileSize)
+      {
+        Log.i(TAG, "Session Joined");
+        runOnUiThread(new Runnable()
+        {
+
+          @Override
+          public void run()
+          {
+            connectButton.setText(sessionName);
+          }
+        });
+      }
+    };
+
+
+    boolean getLatestEvent = false;
+    
+    // Instantiate client object
+    try
+    {
+      myClient = new CollabrifyClient(this, "gocannon16@gmail.com", "user display name",
+          "441fall2013@umich.edu", "XY3721425NoScOpE", getLatestEvent,
+          collabrifyListener);
+    }
+    catch( CollabrifyException e )
+    {
+      e.printStackTrace();
+    }
+    tags.add("sample");
+    
+    /////////////////////////////////////////////////////////////////////////
+    /////       Protocol buffer workspace for now                       /////
+    /////////////////////////////////////////////////////////////////////////
+    
+    textEditor = new Button(this);
+    textEditor.setText("Edit Text");
+    textEditor.setOnClickListener(new OnClickListener()
+    {
+
+      @Override
+      public void onClick(View v)
+      {
+        setContentView(mainWindow);
+        //setTitle("WeWrite - " + sessionName);
+        mainWindow.setCursorVisible();
+      }
+    });
+    connectScreen.addView(textEditor);
+    
+    setContentView(mainWindow);
+  }
+  public static final int MENU_ADD = Menu.FIRST;
+  public static final int LEAVE = Menu.FIRST+1;
+  public static final int END = Menu.FIRST+2;
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+      super.onCreateOptionsMenu(menu);
+
+      menu.add(Menu.NONE, MENU_ADD, Menu.NONE, "Manage Sessions");
+      //menu.add(Menu.NONE, LEAVE, Menu.NONE, "Leave Session");
+      //menu.add(Menu.NONE, END, Menu.NONE, "End Session");
+      return true;
+  }
+
+     @Override
+      public boolean onOptionsItemSelected(MenuItem item)
+      {
+          switch(item.getItemId())
+          {
+              case MENU_ADD:
+                setContentView(connectScreen);
+                /*
+                if(keyboardUp) {
+                  mainWindow.setInsertText("edit");
+                  final InputMethodManager inputManager = (InputMethodManager)
+                      getSystemService(Context.INPUT_METHOD_SERVICE);
+                  inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                      InputMethodManager.HIDE_NOT_ALWAYS);
+                  keyboardUp = false;
+                  
+                }*/
+                return true;
+                /*
+              case LEAVE:
+                try
+                {
+                  if(myClient.inSession() )
+                    myClient.leaveSession(false);
+                    connectButton.setText("Connect");
+                    setTitle("WeWrite");
+                }
+                catch(CollabrifyException e)
+                {
+                  Log.e(TAG, "error4", e);
+                }
+                setContentView(connectScreen);
+                return true;
+                
+              case END:
+                try
+                {
+                  if(myClient.inSession() && myClient.currentSessionOwner().getId() ==
+                      myClient.currentSessionParticipantId()) {
+                    Event.Builder event = Event.newBuilder();
+                    event.setId(userId);
+                    event.setEnded(true);
+                    myClient.broadcast(event.build().toByteArray(), "lol");
+                    myClient.leaveSession(true);
+                    connectButton.setText("Connect");
+                    setTitle("WeWrite");
+                  }
+                }
+                catch(CollabrifyException e)
+                {
+                  Log.e(TAG, "error4", e);
+                }
+                setContentView(connectScreen);
+                return true;
+                */
+
+              default:
+                 return super.onOptionsItemSelected(item);
+          }
+      }
+}
+
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2648)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3001)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToFieldDeclaration(ASTConverter.java:2893)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleFieldDeclaration(ASTConverter.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:318)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:3051)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:403)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:535)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:325)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1562)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2474)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:537)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:186)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2679)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1222)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:291)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1207)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:807)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:537)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:480)
+	at org.eclipse.jdt.ui.SharedASTProvider.getAST(SharedASTProvider.java:128)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:170)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2013-10-06 23:56:39.064
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2648)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3001)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToFieldDeclaration(ASTConverter.java:2893)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleFieldDeclaration(ASTConverter.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:318)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:3051)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:403)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:535)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:325)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1562)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2474)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:537)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:186)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2679)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1222)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:291)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1207)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:807)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:537)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:480)
+	at org.eclipse.jdt.ui.SharedASTProvider.getAST(SharedASTProvider.java:128)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:170)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2013-10-06 23:56:39.066
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2648)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3001)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToFieldDeclaration(ASTConverter.java:2893)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleFieldDeclaration(ASTConverter.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:318)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:3051)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:403)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:535)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:325)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1562)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2474)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:537)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:186)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2679)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1222)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:291)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1207)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:807)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:537)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:480)
+	at org.eclipse.jdt.ui.SharedASTProvider.getAST(SharedASTProvider.java:128)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:170)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.jdt.core 4 4 2013-10-06 23:56:39.212
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package eecs441.shareeditor;
+
+import com.google.protobuf.*;
+
+import eecs441.shareeditor.proto.TestProto.Event;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.logging.Logger;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import eecs441.shareeditor.R;
+import edu.umich.imlc.android.common.Utils;
+import edu.umich.imlc.collabrify.client.CollabrifyAdapter;
+import edu.umich.imlc.collabrify.client.CollabrifyListener;
+import edu.umich.imlc.collabrify.client.CollabrifyClient;
+import edu.umich.imlc.collabrify.client.CollabrifySession;
+import edu.umich.imlc.collabrify.client.exceptions.CollabrifyException;
+import edu.umich.imlc.collabrify.client.exceptions.ConnectException;
+import edu.umich.imlc.collabrify.client.exceptions.LeaveException;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.InputType;
+import android.text.Layout;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.view.ViewGroup.LayoutParams;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+public class MainActivity1 extends Activity
+{
+  
+  MainView mainWindow;
+
+  LinearLayout connectScreen;
+  boolean keyboardUp;
+  private static String TAG = "ShareEditor";
+  
+  ActionEvent bufferAction;
+  ActionStack UndoStack;
+  ActionStack RedoStack;
+  int MyCounter;
+  
+  
+  Button textEditor;
+  
+  private CollabrifyClient myClient;
+  private Button connectButton;
+  private Button getSessionButton;
+  private Button leaveSessionButton;
+  private Button endSessionButton;
+  private CollabrifyListener collabrifyListener;
+  private ArrayList<String> tags = new ArrayList<String>();
+  private long sessionId;
+  private String sessionName;
+  private int userId;
+  private boolean received = false;
+  
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    builder.setTitle("Enter User ID Number");
+
+    // Set up the input
+    final EditText input = new EditText(this);
+    // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+    input.setInputType(InputType.TYPE_NUMBER_FLAG_SIGNED);
+    builder.setView(input);
+
+    // Set up the buttons
+    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() { 
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            userId = Integer.parseInt(input.getText().toString());
+        }
+    });
+
+    builder.show();
+    keyboardUp = false;
+    final InputMethodManager inputManager = (InputMethodManager)
+        getSystemService(Context.INPUT_METHOD_SERVICE);
+    getWindow().setSoftInputMode(
+        WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+    
+    mainWindow = new MainView(this);
+    
+    bufferAction = new ActionEvent();
+    RedoStack = new ActionStack();
+    UndoStack = new ActionStack();
+    MyCounter = 0;
+    
+   mainWindow.setCursorTouchListener(new OnTouchListener() {
+     private int x;
+     private int y;
+   @Override
+   public boolean onTouch(View v, MotionEvent event) {
+     Layout layout = ((EditText) v).getLayout();
+     switch( event.getAction() ) {
+       case MotionEvent.ACTION_DOWN:
+       x = (int)event.getX();
+       y = (int)event.getY();
+       return true;
+       case MotionEvent.ACTION_UP:
+     if (layout!=null){
+         int line = layout.getLineForVertical(y);
+         int line2 = layout.getLineForVertical((int)event.getY());
+         if((line2 > line+1)||(line2 < line-1)) return true;
+         int offset = layout.getOffsetForHorizontal(line, x);
+         int offset2 = layout.getOffsetForHorizontal(line, (int)event.getX());
+         if((offset2 > offset+2)||(offset2 < offset-2)) return true;
+         mainWindow.setCursorPosition(offset);
+       }
+     return true;
+     }
+     return true;
+   }
+   });
+  
+    mainWindow.setTextChangedListener(new TextWatcher() {
+      public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        if(!received) {
+
+          bufferAction = new ActionEvent();
+
+          bufferAction.setDeleteString(s.toString().substring(start, start+count));
+          MyCounter++;
+          /*if(fixThis.length() != 0) {
+            Event.Builder event = Event.newBuilder();
+            event.setId(userId);
+            event.setCursorpos(mainWindow.getCursorPosition());
+            event.setBeforetext("");
+            event.setAftertext(fixThis);
+            fixThis = "";          
+            try
+            {
+              myClient.broadcast(event.build().toByteArray(), "lol");
+            }
+            catch( CollabrifyException e1 )
+            {
+              e1.printStackTrace();
+            }
+          }
+          removeText += s.toString().substring(start, start+count);*/
+        }
+
+      }
+
+      @Override
+      public void afterTextChanged(Editable arg0)
+      {
+        received = false;
+      }
+
+      @Override
+      public void onTextChanged(CharSequence s, int start, int before, int count)
+      {
+        if(!received) {
+          bufferAction.setInsertString(s.toString().substring(start,start+count));
+          bufferAction.setCursorStart(start);
+          Event.Builder event = Event.newBuilder();
+          event.setId(userId);
+          event.setCursorpos(bufferAction.getCursorStart());
+          event.setBeforetext(bufferAction.delString());
+          event.setAftertext(bufferAction.insString());           
+          try
+          {
+            myClient.broadcast(event.build().toByteArray(), "lol");
+            //MyCounter++;
+          }
+          catch( CollabrifyException e1 )
+          {
+            e1.printStackTrace();
+          }
+          RedoStack.clear();
+          UndoStack.push(bufferAction.invert());
+          /*if(removeText.length() != 0) {
+            Event.Builder event = Event.newBuilder();
+            event.setId(userId);
+            event.setCursorpos(mainWindow.getCursorPosition()-count);
+            event.setBeforetext(removeText);
+            event.setAftertext("");  
+            removeText="";         
+            try
+            {
+              myClient.broadcast(event.build().toByteArray(), "lol");
+            }
+            catch( CollabrifyException e1 )
+            {
+              e1.printStackTrace();
+            }
+          }
+          System.out.println("HERE"+s.toString().substring(start, start+count));
+          fixThis += s.toString().substring(start, start+count);*/
+        }
+        //received = false;
+      }
+    });
+    
+    mainWindow.setInsertClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View ClickedButton) {
+        if(keyboardUp) {
+          mainWindow.setInsertText("edit");
+          inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+              InputMethodManager.HIDE_NOT_ALWAYS);
+          keyboardUp = false;
+        } else {
+        inputManager.showSoftInput(getCurrentFocus(),  0);
+        mainWindow.setInsertText("hide");
+        keyboardUp = true;
+        }
+      }
+    });   
+    
+    mainWindow.setCursorRightListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(mainWindow.getCursorPosition() < mainWindow.getLength()) {
+          mainWindow.setCursorPosition(mainWindow.getCursorPosition()+1);
+        }
+      }
+    });
+    mainWindow.setCursorLeftListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(mainWindow.getCursorPosition()> 0) {
+          mainWindow.setCursorPosition(mainWindow.getCursorPosition()-1);
+        }
+      }
+    });
+    mainWindow.setUndoClickListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(!UndoStack.isEmpty()) {
+          ActionEvent temp = UndoStack.pop();
+          received = true;
+          mainWindow.applyActionEvent(temp);
+          RedoStack.push(temp.invert());
+          Event.Builder event = Event.newBuilder();
+          event.setId(userId);
+          event.setCursorpos(temp.getCursorStart());
+          event.setBeforetext(temp.delString());
+          event.setAftertext(temp.insString());           
+          try
+          {
+            myClient.broadcast(event.build().toByteArray(), "lol");
+            MyCounter++;
+          }
+          catch( CollabrifyException e1 )
+          {
+            e1.printStackTrace();
+          }
+        }
+      }
+    });
+    mainWindow.setRedoClickListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(!RedoStack.isEmpty()) {
+          ActionEvent temp = RedoStack.pop();
+          received = true;
+          mainWindow.applyActionEvent(temp);
+          UndoStack.push(temp.invert());
+          Event.Builder event = Event.newBuilder();
+          event.setId(userId);
+          event.setCursorpos(temp.getCursorStart());
+          event.setBeforetext(temp.delString());
+          event.setAftertext(temp.insString());           
+          try
+          {
+            myClient.broadcast(event.build().toByteArray(), "lol");
+            MyCounter++;
+          }
+          catch( CollabrifyException e1 )
+          {
+            e1.printStackTrace();
+          }
+        }
+      }
+    });
+    setTitle("Text Editor");
+    
+    /////////////////////////////////////////////////////////////////////////
+    /////       Creation of secondary screen for connections            /////
+    /////////////////////////////////////////////////////////////////////////
+    
+    connectScreen = new LinearLayout(this);
+    connectScreen.setOrientation(LinearLayout.VERTICAL);
+    connectScreen.setWeightSum(100f);
+    setTitle("Collabrify Sessions");
+    
+    connectButton = new Button(this);
+    connectButton.setText("Connect");
+    getSessionButton = new Button(this);
+    getSessionButton.setText("Join");
+    leaveSessionButton = new Button(this);
+    leaveSessionButton.setText("Leave");
+    endSessionButton = new Button(this);
+    endSessionButton.setText("End");
+    // enable logging
+    
+    //Logger.getLogger("edu.umich.imlc.collabrify.client")
+    //    .setLevel(LOGGING_LEVEL);
+
+    connectButton.setOnClickListener(new OnClickListener()
+    {
+
+      @Override
+      public void onClick(View v)
+      {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity1.this);
+        builder.setTitle("Enter User ID Number");
+
+        // Set up the input
+        final EditText input = new EditText(MainActivity1.this);
+        // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+        input.setInputType(InputType.TYPE_NUMBER_FLAG_SIGNED);
+        builder.setView(input);
+
+        // Set up the buttons
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() { 
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                sessionName = input.getText().toString();
+                try
+                {
+                  myClient.createSession(sessionName, tags, null, 0);
+                }
+                catch( ConnectException e )
+                {
+                  e.printStackTrace();
+                }
+                catch( CollabrifyException e )
+                {
+                  e.printStackTrace();
+                }
+                Log.i(TAG, "Session name is " + sessionName);
+                connectButton.setText("Connected to " + sessionName);
+                setTitle("WeWrite - " + sessionName);
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+          @Override
+          public void onClick(DialogInterface dialog, int which) {
+              dialog.cancel();
+          }
+      });
+        builder.show();
+      }
+    });
+
+    getSessionButton.setOnClickListener(new OnClickListener()
+    {
+
+      @Override
+      public void onClick(View v)
+      {
+        try
+        {
+          myClient.requestSessionList(tags);
+        }
+        catch( Exception e )
+        {
+          Log.e(TAG, "error3", e);
+        }
+      }
+    });
+
+    leaveSessionButton.setOnClickListener(new OnClickListener()
+    {
+      @Override
+      public void onClick(View v)
+      {
+        try
+        {
+          if( myClient.inSession() )
+            myClient.leaveSession(false);
+            connectButton.setText("Connect");
+        }
+        catch( CollabrifyException e )
+        {
+          Log.e(TAG, "error4", e);
+        }
+      }
+    });
+    
+    endSessionButton.setOnClickListener(new OnClickListener()
+    {
+      @Override
+      public void onClick(View v)
+      {
+        try
+        {
+          if( myClient.inSession() )
+            myClient.currentSessionEnded();
+            connectButton.setText("Connect");
+        }
+        catch( CollabrifyException e )
+        {
+          Log.e(TAG, "error4", e);
+        }
+      }
+    });
+
+    connectScreen.addView(connectButton);
+    connectScreen.addView(getSessionButton);
+    connectScreen.addView(leaveSessionButton);
+    connectScreen.addView(endSessionButton);
+    
+    collabrifyListener = new CollabrifyAdapter()
+    {
+      @Override
+      public void onDisconnect()
+      {
+        Log.i(TAG, "disconnected");
+        runOnUiThread(new Runnable()
+        {
+
+          @Override
+          public void run()
+          {
+            connectButton.setText("Connect");
+          }
+        });
+      }
+
+      @Override
+      public void onReceiveEvent(final long orderId, int subId,
+          String eventType, final byte[] data)
+      {
+        Utils.printMethodName(TAG);
+        Log.d(TAG, "RECEIVED SUB ID:" + subId);
+        runOnUiThread(new Runnable()
+        {
+          @Override
+          public void run()
+          {
+            Utils.printMethodName(TAG);
+            //String message = new String(data);
+            System.out.println("RECVD MESSG?");           
+            Event eventRecvd = null;
+            try
+            {
+              eventRecvd = Event.parseFrom(data);
+            }
+            catch( InvalidProtocolBufferException e )
+            {
+              e.printStackTrace();
+            }
+            System.out.println("#########" + userId + " " + eventRecvd.getId());
+            //DO ACTION HERE
+            if(eventRecvd.getId() != userId) {
+              if(eventRecvd.hasEnded()) {
+                connectButton.setText("Connect");
+                setTitle("WeWrite");
+                try
+                {
+                  myClient.leaveSession(false);
+                }
+                catch( LeaveException e )
+                {
+                  // TODO Auto-generated catch block
+                  e.printStackTrace();
+                }
+                catch( CollabrifyException e )
+                {
+                  // TODO Auto-generated catch block
+                  e.printStackTrace();
+                }
+                setContentView(connectScreen); 
+              }
+              else {
+                ActionEvent A = new ActionEvent();
+                if(eventRecvd.hasAftertext())
+                  A.setInsertString(eventRecvd.getAftertext());
+                if(eventRecvd.hasBeforetext())
+                  A.setDeleteString(eventRecvd.getBeforetext());
+                if(eventRecvd.hasCursorpos())
+                  A.setCursorStart(eventRecvd.getCursorpos());
+                System.out.println("Cursor: " + eventRecvd.getCursorpos());
+              
+     ///////////////LOOK HERE SYNTAX IS NOT RIGHT BUT I DONT KNOW IT////////////////////////////
+                int RecCounter = (int) orderId; ///Change this line to what collabrify sends
+                //received = true;
+                for(int i = 0; i < MyCounter - RecCounter; i++) {
+                  received = true;
+                  ActionEvent temp = UndoStack.pop();
+                  mainWindow.applyActionEvent(temp);
+                  RedoStack.push(temp.invert());
+                }
+                received = true;
+                mainWindow.applyActionEvent(A);
+                UndoStack.ApplyActionEvent(A);
+                RedoStack.ApplyActionEvent(A);
+               for(int i = 0; i < MyCounter - RecCounter; i++) {
+                  received = true;
+                  ActionEvent temp = RedoStack.pop();
+                  mainWindow.applyActionEvent(temp);
+                  UndoStack.push(temp.invert());
+                }
+                MyCounter++;
+              }
+            }
+            //RIGHT FREAKIN HERE
+          }
+        });
+      }
+
+      @Override
+      public void onReceiveSessionList(final List<CollabrifySession> sessionList)
+      {
+        if( sessionList.isEmpty() )
+        {
+          Log.i(TAG, "No session available");
+          return;
+        }
+        final List<String> sessionNames = new ArrayList<String>();
+        for( CollabrifySession s : sessionList )
+        {
+          sessionNames.add(s.name());
+        }
+        final AlertDialog.Builder builder = new AlertDialog.Builder(
+            MainActivity1.this);
+          
+          builder.setTitle("Choose Session").setItems(
+            sessionNames.toArray(new String[sessionList.size()]),
+            new DialogInterface.OnClickListener()
+            {
+              @Override
+              public void onClick(DialogInterface dialog, int which)
+              {
+                try
+                {
+                  sessionId = sessionList.get(which).id();
+                  sessionName = sessionList.get(which).name();
+                  myClient.joinSession(sessionId, null);
+                  connectButton.setText("Connected to " + sessionName);
+                  setTitle("WeWrite - " + sessionName);
+                  MyCounter = 0;
+                }
+                catch( CollabrifyException e )
+                {
+                  Log.e(TAG, "error5", e);
+                }
+              }
+            });
+          //builder.setTitle("Choose Session");
+          final EditText input = new EditText(MainActivity1.this);
+          // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+          input.setInputType(InputType.TYPE_CLASS_TEXT);
+          //builder.setView(input);
+
+          // Set up the buttons
+          DialogInterface.OnClickListener positive = new DialogInterface.OnClickListener() { 
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                final String m_Text = input.getText().toString();
+                if(sessionNames.contains(m_Text)) {
+                  try
+                  {
+                    int index = -1;
+                    for(int i = 0; i < sessionNames.size(); i++) {
+                      if(sessionNames.get(i).equals(m_Text)) {
+                        index = i;
+                        i = sessionNames.size();
+                      }
+                    }
+                    if(index >= 0) {
+                    sessionId = sessionList.get(index).id();
+                    sessionName = sessionList.get(index).name();
+                    myClient.joinSession(sessionId, null);
+                    connectButton.setText("Connected to " + sessionName);
+                    setTitle("WeWrite - " + sessionName);
+
+                    setContentView(mainWindow);
+                  }
+                  catch( CollabrifyException e )
+                  {
+                    Log.e(TAG, "error5", e);
+                  }
+                }
+                else {
+                  /*final AlertDialog.Builder builder2 = new AlertDialog.Builder(
+                      MainActivity1.this);
+                    builder2.setTitle("Not a Valid Session");
+
+                    // Set up the buttons
+                    builder2.setPositiveButton("OK", new DialogInterface.OnClickListener() { 
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {}
+                    });
+                    builder2.show(); */
+                }
+            }
+        };
+        DialogInterface.OnClickListener negative = new DialogInterface.OnClickListener() {
+          @Override
+          public void onClick(DialogInterface dialog, int which) {
+              dialog.cancel();
+          }
+      };
+          builder.setTitle("Choose Session").setView(input).setPositiveButton("OK", positive).setNegativeButton("Cancel", negative);
+        
+        runOnUiThread(new Runnable()
+        {
+
+          @Override
+          public void run()
+          {
+            builder.show();
+          }
+        });
+        
+          //builder.show();
+      }
+
+      @Override
+      public void onSessionCreated(long id)
+      {
+        Log.i(TAG, "Session created, id: " + id);
+        sessionId = id;
+        runOnUiThread(new Runnable()
+        {
+
+          @Override
+          public void run()
+          {
+            //connectButton.setText(sessionName);
+          }
+        });
+      }
+
+      @Override
+      public void onError(CollabrifyException e)
+      {
+        Log.e(TAG, "error1", e);
+      }
+
+      @Override
+      public void onSessionJoined(long maxOrderId, long baseFileSize)
+      {
+        Log.i(TAG, "Session Joined");
+        runOnUiThread(new Runnable()
+        {
+
+          @Override
+          public void run()
+          {
+            connectButton.setText(sessionName);
+          }
+        });
+      }
+    };
+
+
+    boolean getLatestEvent = false;
+    
+    // Instantiate client object
+    try
+    {
+      myClient = new CollabrifyClient(this, "gocannon16@gmail.com", "user display name",
+          "441fall2013@umich.edu", "XY3721425NoScOpE", getLatestEvent,
+          collabrifyListener);
+    }
+    catch( CollabrifyException e )
+    {
+      e.printStackTrace();
+    }
+    tags.add("sample");
+    
+    /////////////////////////////////////////////////////////////////////////
+    /////       Protocol buffer workspace for now                       /////
+    /////////////////////////////////////////////////////////////////////////
+    
+    textEditor = new Button(this);
+    textEditor.setText("Edit Text");
+    textEditor.setOnClickListener(new OnClickListener()
+    {
+
+      @Override
+      public void onClick(View v)
+      {
+        setContentView(mainWindow);
+        //setTitle("WeWrite - " + sessionName);
+        mainWindow.setCursorVisible();
+      }
+    });
+    connectScreen.addView(textEditor);
+    
+    setContentView(mainWindow);
+  }
+  public static final int MENU_ADD = Menu.FIRST;
+  public static final int LEAVE = Menu.FIRST+1;
+  public static final int END = Menu.FIRST+2;
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+      super.onCreateOptionsMenu(menu);
+
+      menu.add(Menu.NONE, MENU_ADD, Menu.NONE, "Manage Sessions");
+      //menu.add(Menu.NONE, LEAVE, Menu.NONE, "Leave Session");
+      //menu.add(Menu.NONE, END, Menu.NONE, "End Session");
+      return true;
+  }
+
+     @Override
+      public boolean onOptionsItemSelected(MenuItem item)
+      {
+          switch(item.getItemId())
+          {
+              case MENU_ADD:
+                setContentView(connectScreen);
+                /*
+                if(keyboardUp) {
+                  mainWindow.setInsertText("edit");
+                  final InputMethodManager inputManager = (InputMethodManager)
+                      getSystemService(Context.INPUT_METHOD_SERVICE);
+                  inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                      InputMethodManager.HIDE_NOT_ALWAYS);
+                  keyboardUp = false;
+                  
+                }*/
+                return true;
+                /*
+              case LEAVE:
+                try
+                {
+                  if(myClient.inSession() )
+                    myClient.leaveSession(false);
+                    connectButton.setText("Connect");
+                    setTitle("WeWrite");
+                }
+                catch(CollabrifyException e)
+                {
+                  Log.e(TAG, "error4", e);
+                }
+                setContentView(connectScreen);
+                return true;
+                
+              case END:
+                try
+                {
+                  if(myClient.inSession() && myClient.currentSessionOwner().getId() ==
+                      myClient.currentSessionParticipantId()) {
+                    Event.Builder event = Event.newBuilder();
+                    event.setId(userId);
+                    event.setEnded(true);
+                    myClient.broadcast(event.build().toByteArray(), "lol");
+                    myClient.leaveSession(true);
+                    connectButton.setText("Connect");
+                    setTitle("WeWrite");
+                  }
+                }
+                catch(CollabrifyException e)
+                {
+                  Log.e(TAG, "error4", e);
+                }
+                setContentView(connectScreen);
+                return true;
+                */
+
+              default:
+                 return super.onOptionsItemSelected(item);
+          }
+      }
+}
+
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2648)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3001)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToFieldDeclaration(ASTConverter.java:2893)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleFieldDeclaration(ASTConverter.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:318)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:3051)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:403)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:535)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:325)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1562)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2474)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:537)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:186)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2679)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1222)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:246)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:203)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:258)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1082)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:170)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:89)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:788)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1247)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2013-10-06 23:56:39.260
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2648)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3001)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToFieldDeclaration(ASTConverter.java:2893)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleFieldDeclaration(ASTConverter.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:318)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:3051)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:403)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:535)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:325)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1562)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2474)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:537)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:186)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2679)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1222)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:246)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:203)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:258)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1082)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:170)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:89)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:788)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1247)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2013-10-06 23:56:39.262
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2648)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3001)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToFieldDeclaration(ASTConverter.java:2893)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleFieldDeclaration(ASTConverter.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:318)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:3051)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:403)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:535)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:325)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1562)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2474)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:537)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:186)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2679)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1222)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:246)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:203)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:258)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1082)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:170)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:89)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:788)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1247)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.jdt.core 4 4 2013-10-06 23:56:45.384
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package eecs441.shareeditor;
+
+import com.google.protobuf.*;
+
+import eecs441.shareeditor.proto.TestProto.Event;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.logging.Logger;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import eecs441.shareeditor.R;
+import edu.umich.imlc.android.common.Utils;
+import edu.umich.imlc.collabrify.client.CollabrifyAdapter;
+import edu.umich.imlc.collabrify.client.CollabrifyListener;
+import edu.umich.imlc.collabrify.client.CollabrifyClient;
+import edu.umich.imlc.collabrify.client.CollabrifySession;
+import edu.umich.imlc.collabrify.client.exceptions.CollabrifyException;
+import edu.umich.imlc.collabrify.client.exceptions.ConnectException;
+import edu.umich.imlc.collabrify.client.exceptions.LeaveException;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.InputType;
+import android.text.Layout;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.view.ViewGroup.LayoutParams;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+public class MainActivity1 extends Activity
+{
+  
+  MainView mainWindow;
+
+  LinearLayout connectScreen;
+  boolean keyboardUp;
+  private static String TAG = "ShareEditor";
+  
+  ActionEvent bufferAction;
+  ActionStack UndoStack;
+  ActionStack RedoStack;
+  int MyCounter;
+  
+  
+  Button textEditor;
+  
+  private CollabrifyClient myClient;
+  private Button connectButton;
+  private Button getSessionButton;
+  private Button leaveSessionButton;
+  private Button endSessionButton;
+  private CollabrifyListener collabrifyListener;
+  private ArrayList<String> tags = new ArrayList<String>();
+  private long sessionId;
+  private String sessionName;
+  private int userId;
+  private boolean received = false;
+  
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    builder.setTitle("Enter User ID Number");
+
+    // Set up the input
+    final EditText input = new EditText(this);
+    // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+    input.setInputType(InputType.TYPE_NUMBER_FLAG_SIGNED);
+    builder.setView(input);
+
+    // Set up the buttons
+    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() { 
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            userId = Integer.parseInt(input.getText().toString());
+        }
+    });
+
+    builder.show();
+    keyboardUp = false;
+    final InputMethodManager inputManager = (InputMethodManager)
+        getSystemService(Context.INPUT_METHOD_SERVICE);
+    getWindow().setSoftInputMode(
+        WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+    
+    mainWindow = new MainView(this);
+    
+    bufferAction = new ActionEvent();
+    RedoStack = new ActionStack();
+    UndoStack = new ActionStack();
+    MyCounter = 0;
+    
+   mainWindow.setCursorTouchListener(new OnTouchListener() {
+     private int x;
+     private int y;
+   @Override
+   public boolean onTouch(View v, MotionEvent event) {
+     Layout layout = ((EditText) v).getLayout();
+     switch( event.getAction() ) {
+       case MotionEvent.ACTION_DOWN:
+       x = (int)event.getX();
+       y = (int)event.getY();
+       return true;
+       case MotionEvent.ACTION_UP:
+     if (layout!=null){
+         int line = layout.getLineForVertical(y);
+         int line2 = layout.getLineForVertical((int)event.getY());
+         if((line2 > line+1)||(line2 < line-1)) return true;
+         int offset = layout.getOffsetForHorizontal(line, x);
+         int offset2 = layout.getOffsetForHorizontal(line, (int)event.getX());
+         if((offset2 > offset+2)||(offset2 < offset-2)) return true;
+         mainWindow.setCursorPosition(offset);
+       }
+     return true;
+     }
+     return true;
+   }
+   });
+  
+    mainWindow.setTextChangedListener(new TextWatcher() {
+      public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        if(!received) {
+
+          bufferAction = new ActionEvent();
+
+          bufferAction.setDeleteString(s.toString().substring(start, start+count));
+          MyCounter++;
+          /*if(fixThis.length() != 0) {
+            Event.Builder event = Event.newBuilder();
+            event.setId(userId);
+            event.setCursorpos(mainWindow.getCursorPosition());
+            event.setBeforetext("");
+            event.setAftertext(fixThis);
+            fixThis = "";          
+            try
+            {
+              myClient.broadcast(event.build().toByteArray(), "lol");
+            }
+            catch( CollabrifyException e1 )
+            {
+              e1.printStackTrace();
+            }
+          }
+          removeText += s.toString().substring(start, start+count);*/
+        }
+
+      }
+
+      @Override
+      public void afterTextChanged(Editable arg0)
+      {
+        received = false;
+      }
+
+      @Override
+      public void onTextChanged(CharSequence s, int start, int before, int count)
+      {
+        if(!received) {
+          bufferAction.setInsertString(s.toString().substring(start,start+count));
+          bufferAction.setCursorStart(start);
+          Event.Builder event = Event.newBuilder();
+          event.setId(userId);
+          event.setCursorpos(bufferAction.getCursorStart());
+          event.setBeforetext(bufferAction.delString());
+          event.setAftertext(bufferAction.insString());           
+          try
+          {
+            myClient.broadcast(event.build().toByteArray(), "lol");
+            //MyCounter++;
+          }
+          catch( CollabrifyException e1 )
+          {
+            e1.printStackTrace();
+          }
+          RedoStack.clear();
+          UndoStack.push(bufferAction.invert());
+          /*if(removeText.length() != 0) {
+            Event.Builder event = Event.newBuilder();
+            event.setId(userId);
+            event.setCursorpos(mainWindow.getCursorPosition()-count);
+            event.setBeforetext(removeText);
+            event.setAftertext("");  
+            removeText="";         
+            try
+            {
+              myClient.broadcast(event.build().toByteArray(), "lol");
+            }
+            catch( CollabrifyException e1 )
+            {
+              e1.printStackTrace();
+            }
+          }
+          System.out.println("HERE"+s.toString().substring(start, start+count));
+          fixThis += s.toString().substring(start, start+count);*/
+        }
+        //received = false;
+      }
+    });
+    
+    mainWindow.setInsertClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View ClickedButton) {
+        if(keyboardUp) {
+          mainWindow.setInsertText("edit");
+          inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+              InputMethodManager.HIDE_NOT_ALWAYS);
+          keyboardUp = false;
+        } else {
+        inputManager.showSoftInput(getCurrentFocus(),  0);
+        mainWindow.setInsertText("hide");
+        keyboardUp = true;
+        }
+      }
+    });   
+    
+    mainWindow.setCursorRightListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(mainWindow.getCursorPosition() < mainWindow.getLength()) {
+          mainWindow.setCursorPosition(mainWindow.getCursorPosition()+1);
+        }
+      }
+    });
+    mainWindow.setCursorLeftListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(mainWindow.getCursorPosition()> 0) {
+          mainWindow.setCursorPosition(mainWindow.getCursorPosition()-1);
+        }
+      }
+    });
+    mainWindow.setUndoClickListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(!UndoStack.isEmpty()) {
+          ActionEvent temp = UndoStack.pop();
+          received = true;
+          mainWindow.applyActionEvent(temp);
+          RedoStack.push(temp.invert());
+          Event.Builder event = Event.newBuilder();
+          event.setId(userId);
+          event.setCursorpos(temp.getCursorStart());
+          event.setBeforetext(temp.delString());
+          event.setAftertext(temp.insString());           
+          try
+          {
+            myClient.broadcast(event.build().toByteArray(), "lol");
+            MyCounter++;
+          }
+          catch( CollabrifyException e1 )
+          {
+            e1.printStackTrace();
+          }
+        }
+      }
+    });
+    mainWindow.setRedoClickListener(new OnClickListener() {
+      public void onClick(View clickedButton) {
+        if(!RedoStack.isEmpty()) {
+          ActionEvent temp = RedoStack.pop();
+          received = true;
+          mainWindow.applyActionEvent(temp);
+          UndoStack.push(temp.invert());
+          Event.Builder event = Event.newBuilder();
+          event.setId(userId);
+          event.setCursorpos(temp.getCursorStart());
+          event.setBeforetext(temp.delString());
+          event.setAftertext(temp.insString());           
+          try
+          {
+            myClient.broadcast(event.build().toByteArray(), "lol");
+            MyCounter++;
+          }
+          catch( CollabrifyException e1 )
+          {
+            e1.printStackTrace();
+          }
+        }
+      }
+    });
+    setTitle("Text Editor");
+    
+    /////////////////////////////////////////////////////////////////////////
+    /////       Creation of secondary screen for connections            /////
+    /////////////////////////////////////////////////////////////////////////
+    
+    connectScreen = new LinearLayout(this);
+    connectScreen.setOrientation(LinearLayout.VERTICAL);
+    connectScreen.setWeightSum(100f);
+    setTitle("Collabrify Sessions");
+    
+    connectButton = new Button(this);
+    connectButton.setText("Connect");
+    getSessionButton = new Button(this);
+    getSessionButton.setText("Join");
+    leaveSessionButton = new Button(this);
+    leaveSessionButton.setText("Leave");
+    endSessionButton = new Button(this);
+    endSessionButton.setText("End");
+    // enable logging
+    
+    //Logger.getLogger("edu.umich.imlc.collabrify.client")
+    //    .setLevel(LOGGING_LEVEL);
+
+    connectButton.setOnClickListener(new OnClickListener()
+    {
+
+      @Override
+      public void onClick(View v)
+      {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity1.this);
+        builder.setTitle("Enter User ID Number");
+
+        // Set up the input
+        final EditText input = new EditText(MainActivity1.this);
+        // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+        input.setInputType(InputType.TYPE_NUMBER_FLAG_SIGNED);
+        builder.setView(input);
+
+        // Set up the buttons
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() { 
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                sessionName = input.getText().toString();
+                try
+                {
+                  myClient.createSession(sessionName, tags, null, 0);
+                }
+                catch( ConnectException e )
+                {
+                  e.printStackTrace();
+                }
+                catch( CollabrifyException e )
+                {
+                  e.printStackTrace();
+                }
+                Log.i(TAG, "Session name is " + sessionName);
+                connectButton.setText("Connected to " + sessionName);
+                setTitle("WeWrite - " + sessionName);
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+          @Override
+          public void onClick(DialogInterface dialog, int which) {
+              dialog.cancel();
+          }
+      });
+        builder.show();
+      }
+    });
+
+    getSessionButton.setOnClickListener(new OnClickListener()
+    {
+
+      @Override
+      public void onClick(View v)
+      {
+        try
+        {
+          myClient.requestSessionList(tags);
+        }
+        catch( Exception e )
+        {
+          Log.e(TAG, "error3", e);
+        }
+      }
+    });
+
+    leaveSessionButton.setOnClickListener(new OnClickListener()
+    {
+      @Override
+      public void onClick(View v)
+      {
+        try
+        {
+          if( myClient.inSession() )
+            myClient.leaveSession(false);
+            connectButton.setText("Connect");
+        }
+        catch( CollabrifyException e )
+        {
+          Log.e(TAG, "error4", e);
+        }
+      }
+    });
+    
+    endSessionButton.setOnClickListener(new OnClickListener()
+    {
+      @Override
+      public void onClick(View v)
+      {
+        try
+        {
+          if( myClient.inSession() )
+            myClient.currentSessionEnded();
+            connectButton.setText("Connect");
+        }
+        catch( CollabrifyException e )
+        {
+          Log.e(TAG, "error4", e);
+        }
+      }
+    });
+
+    connectScreen.addView(connectButton);
+    connectScreen.addView(getSessionButton);
+    connectScreen.addView(leaveSessionButton);
+    connectScreen.addView(endSessionButton);
+    
+    collabrifyListener = new CollabrifyAdapter()
+    {
+      @Override
+      public void onDisconnect()
+      {
+        Log.i(TAG, "disconnected");
+        runOnUiThread(new Runnable()
+        {
+
+          @Override
+          public void run()
+          {
+            connectButton.setText("Connect");
+          }
+        });
+      }
+
+      @Override
+      public void onReceiveEvent(final long orderId, int subId,
+          String eventType, final byte[] data)
+      {
+        Utils.printMethodName(TAG);
+        Log.d(TAG, "RECEIVED SUB ID:" + subId);
+        runOnUiThread(new Runnable()
+        {
+          @Override
+          public void run()
+          {
+            Utils.printMethodName(TAG);
+            //String message = new String(data);
+            System.out.println("RECVD MESSG?");           
+            Event eventRecvd = null;
+            try
+            {
+              eventRecvd = Event.parseFrom(data);
+            }
+            catch( InvalidProtocolBufferException e )
+            {
+              e.printStackTrace();
+            }
+            System.out.println("#########" + userId + " " + eventRecvd.getId());
+            //DO ACTION HERE
+            if(eventRecvd.getId() != userId) {
+              if(eventRecvd.hasEnded()) {
+                connectButton.setText("Connect");
+                setTitle("WeWrite");
+                try
+                {
+                  myClient.leaveSession(false);
+                }
+                catch( LeaveException e )
+                {
+                  // TODO Auto-generated catch block
+                  e.printStackTrace();
+                }
+                catch( CollabrifyException e )
+                {
+                  // TODO Auto-generated catch block
+                  e.printStackTrace();
+                }
+                setContentView(connectScreen); 
+              }
+              else {
+                ActionEvent A = new ActionEvent();
+                if(eventRecvd.hasAftertext())
+                  A.setInsertString(eventRecvd.getAftertext());
+                if(eventRecvd.hasBeforetext())
+                  A.setDeleteString(eventRecvd.getBeforetext());
+                if(eventRecvd.hasCursorpos())
+                  A.setCursorStart(eventRecvd.getCursorpos());
+                System.out.println("Cursor: " + eventRecvd.getCursorpos());
+              
+     ///////////////LOOK HERE SYNTAX IS NOT RIGHT BUT I DONT KNOW IT////////////////////////////
+                int RecCounter = (int) orderId; ///Change this line to what collabrify sends
+                //received = true;
+                for(int i = 0; i < MyCounter - RecCounter; i++) {
+                  received = true;
+                  ActionEvent temp = UndoStack.pop();
+                  mainWindow.applyActionEvent(temp);
+                  RedoStack.push(temp.invert());
+                }
+                received = true;
+                mainWindow.applyActionEvent(A);
+                UndoStack.ApplyActionEvent(A);
+                RedoStack.ApplyActionEvent(A);
+               for(int i = 0; i < MyCounter - RecCounter; i++) {
+                  received = true;
+                  ActionEvent temp = RedoStack.pop();
+                  mainWindow.applyActionEvent(temp);
+                  UndoStack.push(temp.invert());
+                }
+                MyCounter++;
+              }
+            }
+            //RIGHT FREAKIN HERE
+          }
+        });
+      }
+
+      @Override
+      public void onReceiveSessionList(final List<CollabrifySession> sessionList)
+      {
+        if( sessionList.isEmpty() )
+        {
+          Log.i(TAG, "No session available");
+          return;
+        }
+        final List<String> sessionNames = new ArrayList<String>();
+        for( CollabrifySession s : sessionList )
+        {
+          sessionNames.add(s.name());
+        }
+        final AlertDialog.Builder builder = new AlertDialog.Builder(
+            MainActivity1.this);
+          
+          builder.setTitle("Choose Session").setItems(
+            sessionNames.toArray(new String[sessionList.size()]),
+            new DialogInterface.OnClickListener()
+            {
+              @Override
+              public void onClick(DialogInterface dialog, int which)
+              {
+                try
+                {
+                  sessionId = sessionList.get(which).id();
+                  sessionName = sessionList.get(which).name();
+                  myClient.joinSession(sessionId, null);
+                  connectButton.setText("Connected to " + sessionName);
+                  setTitle("WeWrite - " + sessionName);
+                  MyCounter = 0;
+                }
+                catch( CollabrifyException e )
+                {
+                  Log.e(TAG, "error5", e);
+                }
+              }
+            });
+          //builder.setTitle("Choose Session");
+          final EditText input = new EditText(MainActivity1.this);
+          // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+          input.setInputType(InputType.TYPE_CLASS_TEXT);
+          //builder.setView(input);
+
+          // Set up the buttons
+          DialogInterface.OnClickListener positive = new DialogInterface.OnClickListener() { 
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                final String m_Text = input.getText().toString();
+                if(sessionNames.contains(m_Text)) {
+                  try
+                  {
+                    int index = -1;
+                    for(int i = 0; i < sessionNames.size(); i++) {
+                      if(sessionNames.get(i).equals(m_Text)) {
+                        index = i;
+                        i = sessionNames.size();
+                      }
+                    }
+                    if(index >= 0) {
+                      try
+                      {
+                    }
+                    sessionId = sessionList.get(index).id();
+                    sessionName = sessionList.get(index).name();
+                    myClient.joinSession(sessionId, null);
+                    connectButton.setText("Connected to " + sessionName);
+                    setTitle("WeWrite - " + sessionName);
+
+                    setContentView(mainWindow);
+                  }
+                  catch( CollabrifyException e )
+                  {
+                    Log.e(TAG, "error5", e);
+                  }
+                }
+                else {
+                  /*final AlertDialog.Builder builder2 = new AlertDialog.Builder(
+                      MainActivity1.this);
+                    builder2.setTitle("Not a Valid Session");
+
+                    // Set up the buttons
+                    builder2.setPositiveButton("OK", new DialogInterface.OnClickListener() { 
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {}
+                    });
+                    builder2.show(); */
+                }
+            }
+        };
+        DialogInterface.OnClickListener negative = new DialogInterface.OnClickListener() {
+          @Override
+          public void onClick(DialogInterface dialog, int which) {
+              dialog.cancel();
+          }
+      };
+          builder.setTitle("Choose Session").setView(input).setPositiveButton("OK", positive).setNegativeButton("Cancel", negative);
+        
+        runOnUiThread(new Runnable()
+        {
+
+          @Override
+          public void run()
+          {
+            builder.show();
+          }
+        });
+        
+          //builder.show();
+      }
+
+      @Override
+      public void onSessionCreated(long id)
+      {
+        Log.i(TAG, "Session created, id: " + id);
+        sessionId = id;
+        runOnUiThread(new Runnable()
+        {
+
+          @Override
+          public void run()
+          {
+            //connectButton.setText(sessionName);
+          }
+        });
+      }
+
+      @Override
+      public void onError(CollabrifyException e)
+      {
+        Log.e(TAG, "error1", e);
+      }
+
+      @Override
+      public void onSessionJoined(long maxOrderId, long baseFileSize)
+      {
+        Log.i(TAG, "Session Joined");
+        runOnUiThread(new Runnable()
+        {
+
+          @Override
+          public void run()
+          {
+            connectButton.setText(sessionName);
+          }
+        });
+      }
+    };
+
+
+    boolean getLatestEvent = false;
+    
+    // Instantiate client object
+    try
+    {
+      myClient = new CollabrifyClient(this, "gocannon16@gmail.com", "user display name",
+          "441fall2013@umich.edu", "XY3721425NoScOpE", getLatestEvent,
+          collabrifyListener);
+    }
+    catch( CollabrifyException e )
+    {
+      e.printStackTrace();
+    }
+    tags.add("sample");
+    
+    /////////////////////////////////////////////////////////////////////////
+    /////       Protocol buffer workspace for now                       /////
+    /////////////////////////////////////////////////////////////////////////
+    
+    textEditor = new Button(this);
+    textEditor.setText("Edit Text");
+    textEditor.setOnClickListener(new OnClickListener()
+    {
+
+      @Override
+      public void onClick(View v)
+      {
+        setContentView(mainWindow);
+        //setTitle("WeWrite - " + sessionName);
+        mainWindow.setCursorVisible();
+      }
+    });
+    connectScreen.addView(textEditor);
+    
+    setContentView(mainWindow);
+  }
+  public static final int MENU_ADD = Menu.FIRST;
+  public static final int LEAVE = Menu.FIRST+1;
+  public static final int END = Menu.FIRST+2;
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+      super.onCreateOptionsMenu(menu);
+
+      menu.add(Menu.NONE, MENU_ADD, Menu.NONE, "Manage Sessions");
+      //menu.add(Menu.NONE, LEAVE, Menu.NONE, "Leave Session");
+      //menu.add(Menu.NONE, END, Menu.NONE, "End Session");
+      return true;
+  }
+
+     @Override
+      public boolean onOptionsItemSelected(MenuItem item)
+      {
+          switch(item.getItemId())
+          {
+              case MENU_ADD:
+                setContentView(connectScreen);
+                /*
+                if(keyboardUp) {
+                  mainWindow.setInsertText("edit");
+                  final InputMethodManager inputManager = (InputMethodManager)
+                      getSystemService(Context.INPUT_METHOD_SERVICE);
+                  inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                      InputMethodManager.HIDE_NOT_ALWAYS);
+                  keyboardUp = false;
+                  
+                }*/
+                return true;
+                /*
+              case LEAVE:
+                try
+                {
+                  if(myClient.inSession() )
+                    myClient.leaveSession(false);
+                    connectButton.setText("Connect");
+                    setTitle("WeWrite");
+                }
+                catch(CollabrifyException e)
+                {
+                  Log.e(TAG, "error4", e);
+                }
+                setContentView(connectScreen);
+                return true;
+                
+              case END:
+                try
+                {
+                  if(myClient.inSession() && myClient.currentSessionOwner().getId() ==
+                      myClient.currentSessionParticipantId()) {
+                    Event.Builder event = Event.newBuilder();
+                    event.setId(userId);
+                    event.setEnded(true);
+                    myClient.broadcast(event.build().toByteArray(), "lol");
+                    myClient.leaveSession(true);
+                    connectButton.setText("Connect");
+                    setTitle("WeWrite");
+                  }
+                }
+                catch(CollabrifyException e)
+                {
+                  Log.e(TAG, "error4", e);
+                }
+                setContentView(connectScreen);
+                return true;
+                */
+
+              default:
+                 return super.onOptionsItemSelected(item);
+          }
+      }
+}
+
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2648)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3001)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToFieldDeclaration(ASTConverter.java:2893)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleFieldDeclaration(ASTConverter.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:318)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:3051)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:403)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:535)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:325)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1562)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2474)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:537)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:186)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2679)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1222)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:246)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:203)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:258)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1082)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:170)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:89)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:788)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1247)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2013-10-06 23:56:45.433
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2648)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3001)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToFieldDeclaration(ASTConverter.java:2893)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleFieldDeclaration(ASTConverter.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:318)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:3051)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:403)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:535)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:325)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1562)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2474)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:537)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:186)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2679)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1222)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:246)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:203)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:258)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1082)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:170)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:89)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:788)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1247)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2013-10-06 23:56:45.435
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2648)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3001)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToFieldDeclaration(ASTConverter.java:2893)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleFieldDeclaration(ASTConverter.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:318)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3023)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:3051)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:403)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:535)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:325)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2307)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1544)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:944)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1562)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2474)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:537)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:186)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2679)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1222)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:246)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:203)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:258)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1082)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:170)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:89)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:788)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1247)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.jface 2 0 2013-10-07 03:13:14.597
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-07 03:13:14.597
+!MESSAGE A conflict occurred for CTRL+I:
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.indent,Correct Indentation,
+		Corrects the indentation of the selected lines,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3e0a8d8a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.active.elements,Format Active Elements,
+		Format active elements,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2075445e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-07 03:13:14.597
+!MESSAGE A conflict occurred for CTRL+SHIFT+F:
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.format,Format,
+		Format the selected text,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@26d27ed8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.document,Format,
+		Format selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5c4465cd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-07 03:13:14.597
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_UP:
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.select.enclosing,Select Enclosing Element,
+		Expand selection to include enclosing element,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4585aad1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.enclosing,Select Enclosing Element,
+		Expand selection to include enclosing element,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@280d57bb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-07 03:13:14.597
+!MESSAGE A conflict occurred for CTRL+SHIFT+/:
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.add.block.comment,Add Block Comment,
+		Enclose the selection with a block comment,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4a91a2ff,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.add.block.comment,Add Block Comment,
+		Add Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@558bd2c7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-07 03:13:14.597
+!MESSAGE A conflict occurred for CTRL+O:
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.show.outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f643998,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.quick_outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6d013a41,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-07 03:13:14.597
+!MESSAGE A conflict occurred for CTRL+SHIFT+P:
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.goto.matching.bracket,Go to Matching Bracket,
+		Moves the cursor to the matching bracket,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6b97b94f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.m2e.core.ui.command.addPlugin,Add Maven Plugin,
+		Add Maven Plugin,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@360728b8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.core.runtime.xml,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.goto.matching.bracket,Matching Character,
+		Go to Matching Character,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@50547013,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-07 03:13:14.597
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_UP:
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.goto.previous.member,Go to Previous Member,
+		Move the caret to the previous member of the compilation unit,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@100263be,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.previousSibling,Previous Sibling,
+		Go to Previous Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@19629355,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-07 03:13:14.597
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_DOWN:
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.select.last,Restore Last Selection,
+		Restore last selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@ce25728,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.last,Restore Last Selection,
+		Restore last selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@52b15537,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-07 03:13:14.597
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5fc809b3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.toggle.comment,Toggle Comment,
+		Toggle Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1e3fafd4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-07 03:13:14.597
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_RIGHT:
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.select.next,Select Next Element,
+		Expand selection to include next sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@45f4f7e5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.next,Select Next Element,
+		Expand selection to include next sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1cca407b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-07 03:13:14.597
+!MESSAGE A conflict occurred for CTRL+SHIFT+\:
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.remove.block.comment,Remove Block Comment,
+		Remove the block comment enclosing the selection,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@55beff44,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.remove.block.comment,Remove Block Comment,
+		Remove Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6b3a24e4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-07 03:13:14.597
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_DOWN:
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.goto.next.member,Go to Next Member,
+		Move the caret to the next member of the compilation unit,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6e68f556,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.nextSibling,Next Sibling,
+		Go to Next Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@676770cb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-10-07 03:13:14.597
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_LEFT:
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.select.previous,Select Previous Element,
+		Expand selection to include previous sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2cc319bb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.previous,Select Previous Element,
+		Expand selection to include previous sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4082b473,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+
+!ENTRY org.eclipse.core.net 4 0 2013-10-07 13:09:27.190
+!MESSAGE WinHttp.GetProxyForUrl for pac failed with error 'The URL does not use a recognized protocol
+' #12006.

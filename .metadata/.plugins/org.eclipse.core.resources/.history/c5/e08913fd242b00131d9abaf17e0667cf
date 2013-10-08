@@ -1,0 +1,195 @@
+package eecs441.shareeditor;
+
+import java.util.Stack;
+
+
+import android.R.string;
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Typeface;
+import android.graphics.drawable.GradientDrawable;
+import android.text.Editable;
+import android.text.InputType;
+import android.text.Layout;
+import android.text.TextWatcher;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.view.ViewGroup.LayoutParams;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.HorizontalScrollView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
+public class MainView extends LinearLayout
+{
+  EditText docText;
+  HoldButton RightButton;
+  HoldButton LeftButton;
+  Button InsertButton;
+  Button UndoButton;
+  Button RedoButton;
+    
+  @SuppressLint("NewApi")
+public MainView(Context context) {
+    super(context);
+    
+    docText = new EditText(context);
+    docText.setLongClickable(false);
+    docText.setClickable(false);
+    
+    docText.setTextIsSelectable(false);
+    docText.setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI);
+    docText.setHorizontallyScrolling(false);
+    docText.setCursorVisible(true);
+    docText.setTextSize(24);
+    docText.setText("Sample Text: Blah, Blah bla blah blah \n\n\n\n\n\nEnd", TextView.BufferType.EDITABLE);
+    docText.setRawInputType(InputType.TYPE_TEXT_VARIATION_NORMAL | InputType.TYPE_TEXT_VARIATION_FILTER | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
+    docText.setTypeface(Typeface.SERIF);
+    docText.setBackgroundColor(0xFFF5fff2);
+    docText.setGravity(0x30);
+    InsertButton = new Button(context);
+    InsertButton.setText("edit");
+    InsertButton.setTypeface(Typeface.DEFAULT_BOLD, Typeface.BOLD);
+    InsertButton.setTextColor(0xffffffff);
+    GradientDrawable gd = new GradientDrawable(
+        GradientDrawable.Orientation.TOP_BOTTOM,
+        new int[] {0xFFda3314,0xFFba1314});
+    
+    gd.setCornerRadius(0f);
+
+    InsertButton.setBackground(gd);
+    
+    GradientDrawable gd2 = new GradientDrawable(
+        GradientDrawable.Orientation.TOP_BOTTOM,
+        new int[] {0xFF33bbff,0xFF1188ee});
+    gd2.setCornerRadius(0f);
+    GradientDrawable gd3 = new GradientDrawable(
+        GradientDrawable.Orientation.TOP_BOTTOM,
+        new int[] {0xff6405ff, 0xff4405df});
+    gd3.setCornerRadius(0f);
+    GradientDrawable gd4 = new GradientDrawable(
+        GradientDrawable.Orientation.TOP_BOTTOM,
+    new int[] {0xFFaa23d4,0xFF8a03b4});
+    gd4.setCornerRadius(0f);
+    UndoButton = new Button(context);
+    RedoButton = new Button(context);
+    UndoButton.setText("↶");
+    UndoButton.setTextColor(0xffffffff);
+    UndoButton.setTypeface(Typeface.DEFAULT_BOLD, Typeface.BOLD);
+    UndoButton.setBackground(gd4);
+    RedoButton.setText("↷");
+    RedoButton.setTextColor(0xffffffff);
+    RedoButton.setTypeface(Typeface.DEFAULT_BOLD, Typeface.BOLD);
+    RedoButton.setBackground(gd3);
+    RightButton = new HoldButton(context);
+    RightButton.setBackground(gd2);
+    LeftButton = new HoldButton(context);
+    LeftButton.setBackground(gd2);
+    RightButton.setText(">");
+    RightButton.setTextColor(0xffffffff);
+    RightButton.setTypeface(Typeface.DEFAULT_BOLD, Typeface.BOLD);
+    LeftButton.setText("<");
+    LeftButton.setTextColor(0xffffffff);
+    LeftButton.setTypeface(Typeface.DEFAULT_BOLD, Typeface.BOLD);
+  
+    setOrientation(LinearLayout.VERTICAL);
+    setWeightSum(100f);
+    
+    ScrollView textPanel = new ScrollView(context);
+    textPanel.addView(docText, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+    textPanel.setFillViewport(true);
+    textPanel.setBackgroundColor(0xff222222);
+    textPanel.setForegroundGravity(0x01);
+    
+    LinearLayout.LayoutParams lay = new LinearLayout.LayoutParams(
+        LayoutParams.MATCH_PARENT, 
+        LayoutParams.MATCH_PARENT);
+    lay.weight = 20f;
+    LinearLayout.LayoutParams lay2 = new LinearLayout.LayoutParams(
+        LayoutParams.MATCH_PARENT, 
+        1000);
+    lay2.weight = 80f;
+    
+   
+    LinearLayout.LayoutParams buttonLay = new LinearLayout.LayoutParams(
+        LayoutParams.MATCH_PARENT, 
+        LayoutParams.MATCH_PARENT, 5f);
+    buttonLay.setMargins(30, 30, 15, 30);
+    LinearLayout.LayoutParams undoLay = new LinearLayout.LayoutParams(
+        LayoutParams.MATCH_PARENT, 
+        LayoutParams.MATCH_PARENT, 5f);
+    undoLay.setMargins(15, 30, 30, 30);
+    LinearLayout.LayoutParams editLay = new LinearLayout.LayoutParams(
+        LayoutParams.MATCH_PARENT, 
+        LayoutParams.MATCH_PARENT, 4.5f);
+    editLay.setMargins(0,30,0,30);
+    
+    LinearLayout buttonLayout = new LinearLayout(context);
+    buttonLayout.setOrientation(LinearLayout.HORIZONTAL);
+    buttonLayout.setWeightSum(24.5f);
+    buttonLayout.setGravity(0x10);
+    buttonLayout.setBackgroundColor(0xff222222);
+    buttonLayout.addView(UndoButton, buttonLay);
+    buttonLayout.addView(RedoButton, undoLay);
+    buttonLayout.addView(InsertButton, editLay);
+    buttonLayout.addView(LeftButton, buttonLay);
+    buttonLayout.addView(RightButton, undoLay);
+
+    addView(textPanel, lay);
+    addView(buttonLayout, lay2);
+    
+  }
+  Editable getText() {
+    return docText.getText();
+  }
+  void setText(String s) {
+    docText.setText(s);
+  }
+  int getCursorPosition() {
+    return docText.getSelectionStart();
+  }
+  int getLength() {
+    return docText.length();
+  }
+  void setCursorPosition(int pos) {
+    docText.setSelection(pos);
+  }
+  void setTextChangedListener(TextWatcher watcher) {
+    docText.addTextChangedListener(watcher);
+  }
+  void setUndoClickListener(OnClickListener listener) {
+    UndoButton.setOnClickListener(listener);
+  }
+  void setRedoClickListener(OnClickListener listener) {
+    RedoButton.setOnClickListener(listener);
+  }
+  void setInsertClickListener(OnClickListener listener) {
+    InsertButton.setOnClickListener(listener);
+  }
+  void setInsertText(CharSequence s) {
+    InsertButton.setText(s);
+  }
+  void setCursorRightListener(OnClickListener listener) {
+    RightButton.setOnClickListener(listener);
+  }
+  void setCursorLeftListener(OnClickListener listener) {
+    LeftButton.setOnClickListener(listener);
+  }
+  void setCursorTouchListener(OnTouchListener listener) {
+    docText.setOnTouchListener(listener);
+  }
+  void setCursorVisible() {
+    docText.setCursorVisible(true);
+    docText.requestFocus();
+  }
+}
